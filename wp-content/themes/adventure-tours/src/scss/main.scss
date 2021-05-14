@@ -1,0 +1,330 @@
+@import "_normalize.scss";
+html{
+  font-family: 'Futura PT';
+}
+body {
+  margin: 0;
+  &.home{
+    .layout-container{
+      width: 100%;
+      padding: 0;
+      margin-bottom: 0;
+    }
+    .margin-top{
+      margin-top: 0;
+    }
+  }
+}
+*{
+  box-sizing: border-box ;
+}
+.flex {
+  display: flex;
+}
+
+.conteiner {
+  max-width: 1300px;
+  padding: 0 100px;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  font-size: 44px;
+  color: #fff;
+}
+
+h2 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  color: #092C6D;
+  text-align: center;
+}
+
+h3 {
+  font-size: 24px;
+  color: #092C6D;
+}
+
+h4 {
+  font-size: 18px;
+  color: #092C6D;
+}
+
+
+.small__button {
+  width: 170px;
+  height: 50px;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #B9110D;
+  border-radius: 4px;
+}
+
+.big-small__but_content {
+  color: #fff;
+  font-family: 'Futura PT';
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+#mage_bus_search_button{
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #B9110D;
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  border-radius: 4px;
+  color: white;
+  &:hover{
+    background-color: #FF3D38;
+    color: white;
+  }
+}
+.big__button, .brown-button {
+  width: 460px;
+  height: 50px;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #B9110D;
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  border-radius: 4px;
+  margin: 25px auto 100px auto;
+  color: white;
+  &:hover{
+    background-color: #FF3D38;
+    color: white;
+  }
+}
+
+.card {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+
+.logout-icon, .login-icon{
+  &:before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url("../../images/inout.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-right: 5px;
+  }
+}
+.account-icon{
+  margin-left: 20px;
+  &:before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url("../../images/login-icon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-right: 5px;
+  }
+}
+.logout-icon, .login-icon, .account-icon {
+  display: flex;
+  align-items: center;
+  a {
+    font-size: 12px;
+    line-height: 125%;
+    color: #092c6d;
+    font-weight: 400;
+    text-decoration: underline;
+  }
+}
+.header__info{
+  #login-menu{
+    margin-right: 20px;
+  }
+  .header__info__items-right, #login-menu{
+    display: flex;
+    align-items: center;
+    a{
+      font-size: 16px;
+    }
+  }
+}
+.reviewes{
+  padding-bottom: 80px;
+  background-color: white;
+  .container{
+    max-width: 1300px;
+    padding: 0 100px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+  @media all and (max-width: 500px) {
+    padding-bottom: 20px;
+  }
+  &__title{
+    margin-bottom: 73px;
+    @media all and (max-width: 500px) {
+      margin-bottom: 20px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &__lnk{
+    text-align: center;
+  }
+}
+
+.strong-view.wpmtst-default{
+  .strong-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    .wpmtst-testimonial{
+      margin: 0 0 30px 0!important;
+      border: none!important;
+      width: calc(50% - 15px);
+      background: #FFFFFF;
+      box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      height: auto;
+      padding: 31px 20px 32px 40px;
+      .wpmtst-testimonial-inner{
+        border: none!important;
+        padding: 0;
+        .wpmtst-testimonial-content{
+          display: flex;
+          justify-content: space-between;
+          @media all and (max-width: 600px) {
+            flex-direction: column;
+          }
+          .wpmtst-testimonial-image{
+            width: 80px;
+            height: 80px;
+            margin: 0;
+            @media all and (max-width: 600px) {
+              margin-bottom: 20px;
+              margin-right: auto;
+              margin-left: auto;
+            }
+            img{
+              object-fit: fill;
+              width: 100%;
+              height: 100%;
+              padding: 0;
+              border: none;
+            }
+          }
+          .wpmtst-testimonial__wrapper{
+            width: 100%;
+            border-radius: 8px;
+            padding: 0 0 0 30px;
+            position: relative;
+            @media all and (max-width: 600px) {
+              width: 100%;
+            }
+            @media all and (max-width: 500px) {
+              padding: 20px;
+            }
+            p{
+              font-size: 1em;
+              line-height: 130%;
+              font-weight: 400;
+              color: #092C6D;
+            }
+            .testimonial-field{
+              font-weight: 600;
+              font-size: 1.4rem;
+              line-height: 140%;
+              color: #403F3E;
+              margin-bottom: 7px;
+              text-align: left;
+              &.testimonial-name{
+                text-align: left;
+                font-size: 1.12em;
+                line-height: 130%;
+                color: #092C6D;
+                font-weight: 600;
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-nav-header{
+  a{
+    font-size: 18px;
+    line-height: 99%;
+    letter-spacing: 0.03em;
+    color: #092C6D;
+    padding-bottom: 3px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s;
+    font-family: 'Rubik', sans-serif;
+    text-transform: none;
+    font-weight: 400;
+    &:hover{
+      color: #FF0000;
+      border-bottom: 3px solid #092C6D;
+    }
+  }
+}
+div[class*='mage_default']{
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  .mage_form_control{
+    margin-bottom: 0;
+  }
+}
+form.mage_form label{
+  margin: 0;
+}
+.main-nav .current-menu-item{
+  &:after{
+    display: none;
+  }
+  a{
+    color: #FF0000;
+    border-bottom: 3px solid #092C6D;
+  }
+}
+.sb-main.sb-chat.sb-no-conversations{
+  display: block!important;
+}
+@import "_fonts.scss";
+@import "_header.scss";
+@import "_section-main.scss";
+@import "_schedule.scss";
+@import "_mailing.scss";
+@import "_inform.scss";
+@import "_footer.scss";
+@import "_media.scss";

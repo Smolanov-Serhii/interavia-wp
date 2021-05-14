@@ -1,0 +1,140 @@
+.main {
+    //margin-top: 90px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .wrap-h1 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: 119px auto 93px auto;
+        h1{
+            line-height: 140%;
+        }
+    }
+    &__wrap-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    &__button {
+        width: 20%;
+        border: 2px solid white;
+        background-color: #fff;
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:hover{
+            .main__button__content{
+                background-color: #FF3D38;
+            }
+            .main__button__active{
+                span{
+                    color: #B9110D;
+                }
+                background-color: #fff;
+            }
+        }
+        &__content {
+            background-color: #B9110D;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 2px;
+            padding: 17px;
+            width: 100%;
+            span {
+                color: #fff;
+                font-family: 'Rubik', sans-serif;
+                font-size: 18px;
+            }
+        }
+        &__active {
+            span{
+                color: #B9110D;
+            }
+            background-color: #fff;
+
+        }
+    }
+    &__wrap-form {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        padding: 52px 30px;
+        background: rgba(0, 0, 0, 0.26);
+        margin: 3px 0 0 0;
+        border-radius: 3px;
+        .big-small__but_content {
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    &__input {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background: #fff;
+        border-radius: 4px;
+        height: 50px;
+        border: 1px solid rgba(9, 44, 109, 0.6);
+        &__city {
+            width: 380px;
+        }
+    }
+}
+
+.form__input :last-child {
+    text-align: end;
+}
+
+.form__input :first-child {
+    text-align: start;
+}
+
+.input {
+    outline: 0;
+    border: none;
+    font-family: 'Futura PT';
+    font-weight: 400;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    &::placeholder{
+        color: #b7b6c6;
+    }
+
+}
+
+.input-city {
+    width: 140px;
+}
+
+.input__roundtrip {
+    width: 90px;
+}
+
+.form__input__roundtrip {
+    width: 270px;
+}
+
+.form__input__passenger-class {
+    width: 180px;
+}
+
+.form__input__passenger-class :last-child {
+    width: 50px;
+}
+
+.form__input__passenger-class :first-child {
+    width: 70px;
+}
+
