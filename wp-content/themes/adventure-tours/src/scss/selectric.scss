@@ -1,18 +1,19 @@
 $selectric-main-color:      #BFBFBF !default;                                              // Color used in border
 $selectric-secondary-color: #BBB !default;                                              // Color used in button
-$selectric-text-color:      #808384 !default;                                              // Color used in label
+$selectric-text-color:      #B7B7C6 !default;                                              // Color used in label
 $selectric-bg-color:        #FFFFFF !default;                                           // Background color
 $selectric-btn-bg-color:    transparent !default;                                           // Button background color
-$selectric-height:          31px !default;                                              // Outer height
+$selectric-height:          50px !default;                                              // Outer height
 $selectric-spacing:         10px !default;                                              // Label left padding
-$selectric-border-width:    0.5px !default;                                               // Outer border width
+$selectric-border-width:    0px !default;                                               // Outer border width
 $selectric-border-radius:   0px !default;                                               // Border radius
 $selectric-inner-height:    $selectric-height - ($selectric-border-width * 2) !default; // Inner height
-$selectric-font-size:       14px !default;                                              // Font size
+$selectric-font-size:       16px !default;                                              // Font size
 
 .selectric-wrapper {
   position: relative;
   cursor: pointer;
+  font-family: 'Futura PT';
 }
 
 .selectric-responsive {
@@ -55,7 +56,7 @@ $selectric-font-size:       14px !default;                                      
     text-align: center;
     font: 0/0 a;
     *font: 20px/#{$selectric-inner-height} Lucida Sans Unicode, Arial Unicode MS, Arial;
-
+    padding: 0 15px;
     &:after {
       content: " ";
       position: absolute;
@@ -90,7 +91,7 @@ $selectric-font-size:       14px !default;                                      
 }
 
 .selectric-open {
-  z-index: 9999;
+  z-index: 99;
 
   .selectric {
     border-color: darken($selectric-main-color, 10%);

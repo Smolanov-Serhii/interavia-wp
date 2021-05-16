@@ -1,3 +1,4 @@
+@import "selectric.scss";
 @import "_normalize.scss";
 html{
   font-family: 'Futura PT';
@@ -81,20 +82,60 @@ h4 {
 a {
   text-decoration: none;
 }
-#mage_bus_search_button{
-  border: 1px solid #fff;
+.mage_form_list{
+  input{
+    height: 52px;
+    border-radius: 0px!important;
+    &::placeholder{
+      color: #B7B7C6!important;
+      font-family: 'Futura PT'!important;
+      font-size: 16px;
+      line-height: 99%;
+    }
+  }
+}
+.mage_form_search{
+  height: 100%;
+  #mage_bus_search_button{
+    height: 100%;
+    border: 1px solid white;
+  }
+}
+
+#mage_bus_search_button, .wpfFilterButton.wpfButton, .wpfClearButton.wpfButton, #mage_bus_search_button, .tnp-submit{
+  border: 1px solid white;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #B9110D;
+  background: #B9110D!important;
   box-shadow: 0 0 10px rgba(0,0,0,0.25);
-  border-radius: 4px;
+  border-radius: 0px;
   color: white;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400!important;
+  font-size: 16px;
+  line-height: 99%;
+  text-transform: none!important;
   &:hover{
     background-color: #FF3D38;
     color: white;
   }
 }
+div[class*='mage_default']{
+  margin-bottom: 0;
+}
+.main__wrap-form-list{
+  .wpfFilterButton.wpfButton, .wpfClearButton.wpfButton{
+    padding: 17px 60px;
+    width: auto;
+    border: 1px solid white;
+  }
+  .wpfFilterContent{
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  }
+}
+
 .big__button, .brown-button {
   width: 460px;
   height: 50px;
@@ -175,12 +216,16 @@ a {
 .reviewes{
   padding-bottom: 80px;
   background-color: white;
+  .brown-button{
+    margin-bottom: 0;
+  }
   .container{
     max-width: 1300px;
     padding: 0 100px;
     width: 100%;
     height: auto;
     margin: auto;
+
   }
   @media all and (max-width: 500px) {
     padding-bottom: 20px;
@@ -320,6 +365,38 @@ form.mage_form label{
 .sb-main.sb-chat.sb-no-conversations{
   display: block!important;
 }
+.mailing{
+  .mailing{
+    background: transparent;
+  }
+}
+#newsletterwidget-2{
+  .tnp.tnp-widget form{
+    display: flex;
+    margin-top: 27px;
+  }
+  .tnp-field{
+    margin-bottom: 0;
+  }
+  input.tnp-email{
+    width: 260px;
+    height: 50px;
+    border-radius: 4px;
+    border: 1px solid #003599;
+    text-align: start;
+    margin-right: 10px;
+    margin-bottom: 0;
+    &::placeholder{
+      font-size: 16px;
+      color: #B7B7C6;
+    }
+  }
+  input.tnp-submit{
+    padding: 13px 32px;
+    height: 100%;
+  }
+}
+
 @import "_fonts.scss";
 @import "_header.scss";
 @import "_section-main.scss";

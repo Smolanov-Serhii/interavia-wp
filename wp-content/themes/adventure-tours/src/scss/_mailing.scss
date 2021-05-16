@@ -3,18 +3,19 @@
     background: radial-gradient(ellipse, #40A6D1, #297DB6);
     height: auto;
     &__text {
-        h3 {
+        font-size: 18px;
+        color: #fff;
+        font-family: 'Futura PT';
+        font-weight: 400;
+        margin: 0;
+        h2 {
             color: #fff;
             font-family: 'Rubik';
             margin: auto 0 13px 0;
+            font-size: 24px;
+            text-align: left;
         }
-        p {
-            font-size: 18px;
-            color: #fff;
-            font-family: 'Futura PT';
-            font-weight: 400;
-            margin: 0;
-        }
+
     }
     &__form {
         display: flex;

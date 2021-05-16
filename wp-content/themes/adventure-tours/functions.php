@@ -1129,10 +1129,61 @@ function register_post_types(){
         //'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
         //'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
         'hierarchical'        => false,
-        'supports'            => [ 'title', 'editor'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+        'supports'            => [ 'title'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
         'taxonomies'          => [],
         'has_archive'         => true,
         'rewrite'             => true,
         'query_var'           => true,
     ] );
 }
+
+if( function_exists('acf_add_options_page') ) {
+
+    acf_add_options_page(array(
+        'page_title' 	=> 'Параметры',
+        'menu_title'	=> 'Параметры темы',
+        'menu_slug' 	=> 'theme-general-settings',
+        'capability'	=> 'edit_posts',
+        'redirect'		=> false
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title' 	=> 'Параметры Header',
+        'menu_title'	=> 'Header',
+        'parent_slug'	=> 'theme-general-settings',
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title' 	=> 'Параметры Footer',
+        'menu_title'	=> 'Footer',
+        'parent_slug'	=> 'theme-general-settings',
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title' 	=> 'Параметры общие',
+        'menu_title'	=> 'Общие',
+        'parent_slug'	=> 'theme-general-settings',
+    ));
+    acf_add_options_sub_page(array(
+        'page_title' 	=> 'Параметры Контакты',
+        'menu_title'	=> 'Контакты',
+        'parent_slug'	=> 'theme-general-settings',
+    ));
+
+}
+
+function avia_widgets_init() {
+
+    register_sidebar(
+        array(
+            'name'          => esc_html__( 'Подписка', 'avia' ),
+            'id'            => 'sidebar_mailing',
+            'description'   => esc_html__( 'Добавте виджет', 'avia' ),
+            'before_widget' => '<section id="%1$s" class="mailing__text widget %2$s">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h2 class="">',
+            'after_title'   => '</h2>',
+        )
+    );
+}
+add_action( 'widgets_init', 'avia_widgets_init' );

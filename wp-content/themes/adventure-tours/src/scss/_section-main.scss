@@ -5,9 +5,11 @@
     background-position: center;
     .wrap-h1 {
         width: 100%;
+        max-width: 470px;
         display: flex;
         align-items: center;
-        margin: 119px auto 93px auto;
+        text-align: left;
+        margin: 119px 0 93px 0;
         h1{
             line-height: 140%;
         }
@@ -59,7 +61,7 @@
 
         }
     }
-    &__wrap-form {
+    &__wrap-form-list {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
@@ -68,6 +70,89 @@
         background: rgba(0, 0, 0, 0.26);
         margin: 3px 0 0 0;
         border-radius: 3px;
+        #wpfBlock_5, #wpfBlock_11, #wpfBlock_17{
+            margin-right: 20px;
+            .label{
+                margin-left: 20px;
+            }
+        }
+        .wpfFilterButtons{
+            .wpfFilterButton{
+                margin: 0;
+            }
+        }
+        .filter-naprav{
+            .direct-icon{
+                background-image: url(../../images/direct-icon.svg);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 15px;
+                left: calc(50% - 10px);
+                z-index: 100;
+            }
+        }
+        .filter-toback{
+            .toback-icon{
+                background-image: url(../../images/calendar-icon.svg);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 15px;
+                left: calc(50% - 10px);
+                z-index: 100;
+            }
+        }
+        .filter-naprav, .filter-toback{
+            display: flex;
+            box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+            margin-right: 20px;
+            position: relative;
+
+            b.button{
+                display: none;
+            }
+            .selectric{
+                .label{
+                    margin-left: 20px;
+                    margin-right: 20px;
+                }
+            }
+            #wpfBlock_2, #wpfBlock_4, #wpfBlock_8, #wpfBlock_10, #wpfBlock_14, #wpfBlock_16{
+                .selectric{
+                    .label{
+                        text-align: right;
+                    }
+                }
+                li{
+                    text-align: right;
+                }
+            }
+        }
+        .wpfFilterWrapper{
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 0!important;
+        }
+        .wpfFilterWrapper ul:not(.wpfButtonsFilter) li{
+            padding-left: 20px!important;
+            padding-right: 20px!important;
+        }
+        .main__wrap-form{
+            display: none;
+            &.active-form{
+                display: block;
+            }
+            .wpfMainWrapper{
+                display: flex;
+            }
+        }
+
         .big-small__but_content {
             font-family: 'Montserrat', sans-serif;
         }
