@@ -12,10 +12,12 @@ if ( ! $sidebar || ! trim ( $sidebar ) ) {
 } else {
 	printf( 
 		'<div class="row">' .
+        '%s' .
 			'<main class="col-md-9" role="main">%s</main>'.
-			'%s' .
+
 		'</div>',
-		$content,
-		$sidebar
+
+		$sidebar,
+        $content
 	);
 }
