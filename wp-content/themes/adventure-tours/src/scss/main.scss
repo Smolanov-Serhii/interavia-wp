@@ -404,6 +404,19 @@ form.mage_form label{
   }
 }
 
+.mewtwo-flights--xl{
+  .mewtwo-widget .mewtwo-flights{
+    background-color: transparent!important;
+    padding: 0!important;
+    border: none!important;
+  }
+}
+.mewtwo-flights-container.mewtwo-flights-container--new{
+  > section.mewtwo-best_offers{
+    display: none!important;
+  }
+}
+
 @import "_fonts.scss";
 @import "_header.scss";
 @import "_section-main.scss";

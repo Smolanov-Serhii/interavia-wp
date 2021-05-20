@@ -45,7 +45,7 @@ get_header();
             </div>
             <div class="main__wrap-form-list">
                 <div class="main__wrap-form avia-filter active-form" data-count="1">
-                    <?php echo do_shortcode('[wpf-filters id=1]')?>
+                    <?php echo do_shortcode('[tp_search_shortcodes id="1"]')?>
                 </div>
                 <div class="main__wrap-form charter-filter" data-count="2">
                     <?php echo do_shortcode('[wpf-filters id=2]')?>
