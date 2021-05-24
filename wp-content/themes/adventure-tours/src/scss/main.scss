@@ -416,6 +416,9 @@ form.mage_form label{
     display: none!important;
   }
 }
+.main__wrap-form-list {
+  display: initial !important;
+}
 
 @import "_fonts.scss";
 @import "_header.scss";
