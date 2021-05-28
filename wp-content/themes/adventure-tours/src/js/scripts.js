@@ -13,7 +13,6 @@ jQuery(document).ready(function($) {
     if ($('.main__wrap-buttons').length){
         $('.main__wrap-buttons .main__button').on('click', function(){
             let ClickedNav = $(this).data('count');
-            console.log(ClickedNav);
             let NeedElem = $( ".main__wrap-form-list .main__wrap-form[data-count='"+ClickedNav+"']" );
             $('.main__wrap-buttons .main__button').removeClass('main__button__active');
             $(this).addClass('main__button__active');

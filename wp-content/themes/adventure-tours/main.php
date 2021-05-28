@@ -51,10 +51,10 @@ get_header();
                     <?php echo do_shortcode('[wpf-filters id=2]')?>
                 </div>
                 <div class="main__wrap-form jd-filter" data-count="3">
-                    <script src="https://c45.travelpayouts.com/content?promo_id=1809&shmarker=321113&trs=130415&tab1=1&tab2=1&tab3=&tab4=&tabDef=1&color_scheme=basic_white&hide_logo=true&hide_logo_tab=true&powered_by=false" charset="utf-8" async="true"></script>
+
                 </div>
                 <div class="main__wrap-form bus-filter" data-count="4">
-                    <script src="//tp.media/content?promo_id=4576&shmarker=321113&campaign_id=45&trs=130415&locale=ru&powered_by=false&border_radius=5&show_logo=false&plain=true&color_background=%23ffffff&color_border=%23FFFFFF&color_button=%23B9110D&color_button_text=%23ffffff" charset="utf-8"></script>
+                    <script src="https://c45.travelpayouts.com/content?promo_id=1809&shmarker=321113&trs=130415&tab1=1&tab2=1&tab3=&tab4=&tabDef=1&color_scheme=basic_white&hide_logo=true&hide_logo_tab=true&powered_by=false" charset="utf-8" async="true"></script>
                 </div>
                 <div class="main__wrap-form turs-filter" data-count="5">
                     <?php echo do_shortcode('[wpf-filters id=5]')?>
@@ -63,8 +63,9 @@ get_header();
         </div>
     </div>
 </section>
-
-    <script charset="utf-8" type="text/javascript" src="http://http://interaviacentr.ru/iframe.js"></script>
+    <section class="result__tickets">
+        <script src="https://c45.travelpayouts.com/content?promo_id=2959&shmarker=321113&trs=130415&bus_from=&bus_to=&bus_sug1=&bus_sug2=&bus_sug3=&bus_sug4=&color_theme=basic_white&show_logo_tab=false&show_logo=false" charset="utf-8" async></script>
+    </section>
 <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) { the_post(); ?>
         <div class="page-single">
