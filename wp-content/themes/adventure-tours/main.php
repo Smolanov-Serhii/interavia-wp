@@ -64,6 +64,7 @@ get_header();
     </div>
 </section>
     <section class="result__tickets">
+
         <script src="https://c45.travelpayouts.com/content?promo_id=2959&shmarker=321113&trs=130415&bus_from=&bus_to=&bus_sug1=&bus_sug2=&bus_sug3=&bus_sug4=&color_theme=basic_white&show_logo_tab=false&show_logo=false" charset="utf-8" async></script>
     </section>
 <?php if ( have_posts() ) : ?>
