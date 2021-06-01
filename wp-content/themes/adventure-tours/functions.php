@@ -1056,7 +1056,7 @@ function replace_core_jquery_version() {
 }
 add_action( 'wp_enqueue_scripts', 'replace_core_jquery_version' );
 
-add_action( 'init', 'register_post_types' );
+//add_action( 'init', 'register_post_types' );
 function register_post_types(){
 
     register_post_type( 'chartavia-events', [

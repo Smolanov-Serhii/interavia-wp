@@ -28,6 +28,11 @@ jQuery(document).ready(function($) {
             }
         });
     }
+    $('#tpcwl_iframe').on('load', () => {
+        let iframeHead = $('iframe').content().find('head');
+        let iframeCSS = '<style>body{color: #e91905}</style>';
+        $(iframeHead).append(iframeCSS);
+    });
 
 
 

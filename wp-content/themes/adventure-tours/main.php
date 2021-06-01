@@ -89,44 +89,15 @@ get_header();
         <div class="schedule__wrap-h2">
             <h2><?php echo the_field('zvgolovok_raspisanie_charternyh_rejsov', 3311)?></h2>
         </div>
-        <div class="schedule__wrap-cards">
-            <?php
-            $args = array(
-                'post_type' => 'chartavia-events',
-                'showposts' => "4", //сколько показать статей
-                'orderby' => "ASC", //сортировка по дате
-                'caller_get_posts' => 1);
-            $my_query = new wp_query($args);
-            if ($my_query->have_posts()) {
-                while ($my_query->have_posts()) {
-                    $my_query->the_post();
-                    $post_id = get_the_ID();
-                    $image = get_field('kartinka_dlya_zapisi', $post_id);
-                    ?>
-                    <div class="card schedule__card">
-                        <div class="ticket-price column">
-                            <h3><?php the_title();?></h3>
-                            <?php
-                            if( have_rows('perechen_rejsov') ):
-                                while( have_rows('perechen_rejsov') ) : the_row();
-                                    $sub_city = get_sub_field('nazvanie_goroda');
-                                    $sub_price = get_sub_field('stoimost');
-                                    ?>
-                                        <div class="ticket-price__city">
-                                            <span><?php  echo $sub_city?></span>
-                                            <span><?php  echo $sub_price?></span>
-                                        </div>
-                                    <?php
-                                endwhile;
-                            else :
-                            endif;?>
-                        </div>
-                        <div class="card-city" style="background-image: url('<?php  echo $image;?>');"></div>
-                    </div>
-                <?php }
-            }
-            wp_reset_query(); ?>
+        <div class="popular">
+            <script src="//tp.media/content?currency=usd&promo_id=4044&shmarker=321113&campaign_id=100&trs=130415&target_host=avia.interaviacentr.ru%2Fflights&locale=ru&limit=6&powered_by=false&destination=MOW" charset="utf-8"></script>
+            <script src="//tp.media/content?currency=usd&promo_id=4044&shmarker=321113&campaign_id=100&trs=130415&target_host=avia.interaviacentr.ru%2Fflights&locale=ru&limit=6&powered_by=false&destination=MSQ" charset="utf-8"></script>
+            <script src="//tp.media/content?currency=usd&promo_id=4044&shmarker=321113&campaign_id=100&trs=130415&target_host=avia.interaviacentr.ru%2Fflights&locale=ru&limit=6&powered_by=false&destination=SIP" charset="utf-8"></script>
+            <script src="//tp.media/content?currency=usd&promo_id=4044&shmarker=321113&campaign_id=100&trs=130415&target_host=avia.interaviacentr.ru%2Fflights&locale=ru&limit=6&powered_by=false&destination=LED" charset="utf-8"></script>
+            <script src="//tp.media/content?currency=usd&promo_id=4044&shmarker=321113&campaign_id=100&trs=130415&target_host=avia.interaviacentr.ru%2Fflights&locale=ru&limit=6&powered_by=false&destination=LED" charset="utf-8"></script>
+            <script src="//tp.media/content?currency=usd&promo_id=4044&shmarker=321113&campaign_id=100&trs=130415&target_host=avia.interaviacentr.ru%2Fflights&locale=ru&limit=6&powered_by=false&destination=LED" charset="utf-8"></script>
         </div>
+
         <div class="schedule__wrap__big-but">
             <a href="<?php echo the_field('ssylka_na_knopku', 3311)?>">
                 <div class="big__button">
@@ -155,44 +126,7 @@ get_header();
         <div class="schedule__wrap-h2">
             <h2><?php echo the_field('zagolovok_raspisanie_aviarejsov', 3311)?></h2>
         </div>
-        <div class="schedule__wrap-cards">
-            <?php
-            $args = array(
-                'post_type' => 'avia-events',
-                'showposts' => "4", //сколько показать статей
-                'orderby' => "ASC", //сортировка по дате
-                'caller_get_posts' => 1);
-            $my_query = new wp_query($args);
-            if ($my_query->have_posts()) {
-                while ($my_query->have_posts()) {
-                    $my_query->the_post();
-                    $post_id = get_the_ID();
-                    $image = get_field('kartinka_dlya_zapisi', $post_id);
-                    ?>
-                    <div class="card schedule__card">
-                        <div class="ticket-price column">
-                            <h3><?php the_title();?></h3>
-                            <?php
-                            if( have_rows('perechen_rejsov') ):
-                                while( have_rows('perechen_rejsov') ) : the_row();
-                                    $sub_city = get_sub_field('nazvanie_goroda');
-                                    $sub_price = get_sub_field('stoimost');
-                                    ?>
-                                    <div class="ticket-price__city">
-                                        <span><?php  echo $sub_city?></span>
-                                        <span><?php  echo $sub_price?></span>
-                                    </div>
-                                <?php
-                                endwhile;
-                            else :
-                            endif;?>
-                        </div>
-                        <div class="card-city" style="background-image: url('<?php  echo $image;?>');"></div>
-                    </div>
-                <?php }
-            }
-            wp_reset_query(); ?>
-        </div>
+    <script src="//tp.media/content?promo_id=2811&shmarker=321113&campaign_id=100&trs=130415&color_button=%23FF0000&target_host=avia.interaviacentr.ru%2Fflights&locale=ru&powered_by=false&airline=&non_direct_flights=true&min_lines=5&border_radius=0&color_background=%23FFFFFF&color_text=%23000000&color_border=%23FFFFFF&destination=BKK&origin=MSQ" charset="utf-8"></script>
         <div class="schedule__wrap__big-but">
             <a href="<?php echo the_field('ssylka_na_knopku_raspisanie_aviarejsov', 3311)?>">
                 <div class="big__button">

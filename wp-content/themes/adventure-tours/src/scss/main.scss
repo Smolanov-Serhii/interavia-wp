@@ -610,7 +610,15 @@ form.mage_form label {
     }
   }
 }
-
+.popular{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  > div{
+    width: calc(33.3% - 15px);
+    margin-bottom: 30px;
+  }
+}
 
 @import "_fonts.scss";
 @import "_header.scss";
