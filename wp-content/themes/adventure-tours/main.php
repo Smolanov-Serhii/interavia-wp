@@ -16,6 +16,12 @@ get_header();
             </h1>
         </div>
         <div class="column">
+            <?php
+            $current_user = wp_get_current_user();
+            if (user_can( $current_user, 'administrator' )) {
+                $disabled = "enabled";
+            } else $disabled = "disabled-item";;
+            ?>
             <div class="main__wrap-buttons">
                 <div class="main__button" data-count="1">
                     <div class="main__button__content main__button__active">
@@ -27,17 +33,17 @@ get_header();
                         <span>Чартерные рейсы</span>
                     </div>
                 </div>
-                <div class="main__button" data-count="3">
+                <div class="main__button <?php echo $disabled;?>" data-count="3">
                     <div class="main__button__content">
                         <span>ЖД билеты</span>
                     </div>
                 </div>
-                <div class="main__button" data-count="4">
+                <div class="main__button <?php echo $disabled;?>" data-count="4">
                     <div class="main__button__content">
                         <span>Автобусы</span>
                     </div>
                 </div>
-                <div class="main__button" data-count="5">
+                <div class="main__button <?php echo $disabled;?>" data-count="5">
                     <div class="main__button__content">
                         <span>Туры</span>
                     </div>
@@ -99,11 +105,11 @@ get_header();
         </div>
 
         <div class="schedule__wrap__big-but">
-            <a href="<?php echo the_field('ssylka_na_knopku', 3311)?>">
-                <div class="big__button">
-                    <span class="big-small__but_content"><?php echo the_field('nadpis_na_knopke', 3311)?></span>
-                </div>
-            </a>
+<!--            <a href="--><?php //echo the_field('ssylka_na_knopku', 3311)?><!--">-->
+<!--                <div class="big__button">-->
+<!--                    <span class="big-small__but_content">--><?php //echo the_field('nadpis_na_knopke', 3311)?><!--</span>-->
+<!--                </div>-->
+<!--            </a>-->
         </div>
     </div>
 </section>
@@ -128,11 +134,11 @@ get_header();
         </div>
     <script src="//tp.media/content?promo_id=2811&shmarker=321113&campaign_id=100&trs=130415&color_button=%23FF0000&target_host=avia.interaviacentr.ru%2Fflights&locale=ru&powered_by=false&airline=&non_direct_flights=true&min_lines=5&border_radius=0&color_background=%23FFFFFF&color_text=%23000000&color_border=%23FFFFFF&destination=BKK&origin=MSQ" charset="utf-8"></script>
         <div class="schedule__wrap__big-but">
-            <a href="<?php echo the_field('ssylka_na_knopku_raspisanie_aviarejsov', 3311)?>">
-                <div class="big__button">
-                    <span class="big-small__but_content"><?php echo the_field('nadpis_na_knopke_raspisanie_aviarejsov', 3311)?></span>
-                </div>
-            </a>
+<!--            <a href="--><?php //echo the_field('ssylka_na_knopku_raspisanie_aviarejsov', 3311)?><!--">-->
+<!--                <div class="big__button">-->
+<!--                    <span class="big-small__but_content">--><?php //echo the_field('nadpis_na_knopke_raspisanie_aviarejsov', 3311)?><!--</span>-->
+<!--                </div>-->
+<!--            </a>-->
         </div>
     </div>
 </section>
@@ -144,9 +150,9 @@ get_header();
         <div class="reviewes__content container">
             <?php echo do_shortcode('[testimonial_view id="1"]')?>
         </div>
-        <div class="reviewes__lnk">
-            <a class="brown-button" href="<?php echo get_home_url(); ?>/otzyvy/" target="_blank">Ещё отзывы</a>
-        </div>
+<!--        <div class="reviewes__lnk">-->
+<!--            <a class="brown-button" href="--><?php //echo get_home_url(); ?><!--/otzyvy/" target="_blank">Ещё отзывы</a>-->
+<!--        </div>-->
     </section>
 
 

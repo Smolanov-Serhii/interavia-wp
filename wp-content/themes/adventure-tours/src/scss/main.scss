@@ -1,13 +1,49 @@
 @import "selectric.scss";
+@import "_default.scss";
 @import "_normalize.scss";
 
-html {
-  font-family: 'Futura PT';
+.subject-works{
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #b9110d;
 }
+*{
+  font-family: 'Futura PT'!important;
+}
+.disabled-item{
+  pointer-events: none;
+  opacity: 0.5;
+}
+.tours-tabs .nav-tabs li.active a, .tours-tabs .nav-tabs li a{
+  font-family: 'Futura PT'!important;
+}
+html {
+  font-family: 'Futura PT'!important;
+}
+.wpfFilterButtons{
+  min-width: auto!important;
+  button{
 
+  }
+}
+.woocommerce-page .woocommerce input.button, .woocommerce-page .woocommerce a.button, .woocommerce-page .woocommerce .button, .woocommerce-page input.button, .woocommerce-page a.button, .woocommerce-page .button, .woocommerce .woocommerce input.button, .woocommerce .woocommerce a.button, .woocommerce .woocommerce .button, .woocommerce input.button, .woocommerce a.button, .woocommerce .button{
+  @include mainbutton;
+  display: inline-flex;
+  background-color: #B9110D!important;
+  border-radius: 4px;
+  border: 1px solid white;
+  font-size: 1.6rem!important;
+  font-family: 'Futura PT'!important;
+  font-weight: 500;
+  &:hover{
+    background-color: #FF3D38!important;
+  }
+}
 body {
   margin: 0;
-
+  font-family: 'Futura PT'!important;
   &.home {
     .layout-container {
       width: 100%;
@@ -225,6 +261,9 @@ div[class*='mage_default'] {
 .header__info {
   #login-menu {
     margin-right: 20px;
+    ul, li{
+      margin-bottom: 0;
+    }
   }
 
   .header__info__items-right, #login-menu {
@@ -524,6 +563,22 @@ form.mage_form label {
 .charter-item {
   &__ticket{
     padding: 20px;
+    position: relative;
+    .current-ticket-lnk{
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      text-align: center;
+      a{
+        @include mainbutton;
+        display: inline-block;
+        margin: auto;
+        border-radius: 4px;
+        &:hover{
+          background-color: #FF3D38!important;
+        }
+      }
+    }
   }
   &__ticket {
     display: flex;
@@ -618,6 +673,135 @@ form.mage_form label {
     width: calc(33.3% - 15px);
     margin-bottom: 30px;
   }
+}
+.widget_root .tab_content .form_field_tips{
+  display: none!important;
+}
+.widget[data-size=large] .tab_content .form_field_tips, .widget[data-size=medium] .tab_content .form_field_tips{
+  display: none!important;
+}
+.home .widget_root .tab_content{
+  form{
+    padding: 1px 0;
+    .form_submit{
+      margin-bottom: 0!important;
+      @include mainbutton;
+      @include filterbutton;
+      height: 50px !important;
+      max-width: none!important;
+    }
+  }
+  .passengers_count_result{
+    border-radius: 5px!important;
+  }
+  .passengers_count_minus, .passengers_count_plus{
+    height: 50px!important;
+    background-color: transparent;
+    border: none!important;
+    color: white!important;
+  }
+  .wrapper_suggest_input, .form_field_input{
+    position: relative;
+    height: 50px!important;
+    input{
+      margin-bottom: 0;
+      padding: 15px 40px 0 14px!important;
+      height: 100%!important;
+    }
+    label{
+      transform: scale(.71428571,.71428571) translateX(0) translateY(-.8em)!important;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 2;
+      font-size: 14px!important;
+      color: #777!important;
+    }
+  }
+}
+.home .mewtwo-widget .mewtwo-flights-submit_button>button{
+  margin-bottom: 0!important;
+  @include mainbutton;
+  @include filterbutton;
+  max-width: none!important;
+}
+.widget .tab_content, .widget_root .tab_content{
+  #date_from{
+    label{
+      display: none!important;
+    }
+    .date_input{
+      height: auto!important;
+      input{
+        margin-bottom: 0!important;
+      }
+    }
+  }
+  background-color: transparent!important;
+  padding: 0!important;
+  border: none!important;
+  .passengers_count{
+    background-color: #FFFFFF;
+    border-radius: 5px!important;
+    .passengers_count_result{
+      color: #000000;
+    }
+  }
+}
+.woocommerce{
+  .product-name{
+    a{
+      color: #092c6d!important;
+      font-weight: 600;
+    }
+  }
+}
+.woocommerce div.product.product_cat-charternye-rejsy .variations .reset_variations:hover{
+  background-color: #FF3D38!important;
+}
+.woocommerce div.product{
+  &.product_cat-charternye-rejsy{
+    .product_title{
+      text-align: left;
+    }
+    .variations{
+      tr{
+        border: none;
+        .value{
+          display: flex;
+          flex-direction: column;
+          .select2{
+            width: 100% !important;
+          }
+        }
+      }
+      .reset_variations{
+        margin-top: 40px;
+        @include mainbutton;
+        padding: 17px 60px!important;
+        border-radius: 4px;
+        &:hover{
+          background-color: #FF3D38!important;
+        }
+      }
+    }
+    .row.charter{
+      margin-top: 40px;
+    }
+    .woocommerce-product-attributes-item__value{
+      text-align: right;
+    }
+    .product-box .row > .col-md-6{
+      width: 200px;
+      &:nth-child(2){
+        width: calc(100% - 200px);
+      }
+    }
+
+  }
+}
+.woocommerce-variation-availability{
+  margin-top: 20px;
 }
 
 @import "_fonts.scss";

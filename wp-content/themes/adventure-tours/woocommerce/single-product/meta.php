@@ -29,35 +29,43 @@ if ( version_compare( WC_VERSION, '2.7', '>' ) ) {
 $is_product_meta = ( $is_sku || $product_categories || $product_tags) ? true : false;
 
 ?>
+<?php
 
-<?php if ( $is_product_meta ) : ?>
-	<?php do_action( 'woocommerce_product_meta_start' ); ?>
+if ( has_term( 'charternye-rejsy', 'product_cat' ) ) {
 
-	<table class="product_meta">
-		<?php if ( $is_sku ) {
-			printf(
-				'<tr class="sku_wrapper"><th>%s</th><td><span class="sku" itemprop="sku">%s</span></td></tr>',
-				esc_html__( 'SKU:', 'adventure-tours' ),
-				esc_html( ( $sku = $product->get_sku() ) ? $sku : esc_html__( 'N/A', 'adventure-tours' ) )
-			);
-		} ?>
+} else {
+    if ( $is_product_meta ) : ?>
+        <?php do_action( 'woocommerce_product_meta_start' ); ?>
 
-		<?php if ( $product_categories ) {
-			printf(
-				'<tr><th>%s</th><td>%s</td></tr>',
-				_n( 'Category:', 'Categories:', $cat_count, 'adventure-tours' ),
-				$product_categories
-			);
-		} ?>
+        <table class="product_meta">
+            <?php if ( $is_sku ) {
+                printf(
+                    '<tr class="sku_wrapper"><th>%s</th><td><span class="sku" itemprop="sku">%s</span></td></tr>',
+                    esc_html__( 'SKU:', 'adventure-tours' ),
+                    esc_html( ( $sku = $product->get_sku() ) ? $sku : esc_html__( 'N/A', 'adventure-tours' ) )
+                );
+            } ?>
 
-		<?php if ( $product_tags ) {
-			printf(
-				'<tr><th>%s</th><td>%s</td></tr>',
-				_n( 'Tag:', 'Tags:', $tag_count, 'adventure-tours' ),
-				$product_tags
-			);
-		} ?>
-	</table>
+            <?php if ( $product_categories ) {
+                printf(
+                    '<tr><th>%s</th><td>%s</td></tr>',
+                    _n( 'Category:', 'Categories:', $cat_count, 'adventure-tours' ),
+                    $product_categories
+                );
+            } ?>
 
-	<?php do_action( 'woocommerce_product_meta_end' ); ?>
-<?php endif; ?>
+            <?php if ( $product_tags ) {
+                printf(
+                    '<tr><th>%s</th><td>%s</td></tr>',
+                    _n( 'Tag:', 'Tags:', $tag_count, 'adventure-tours' ),
+                    $product_tags
+                );
+            } ?>
+        </table>
+
+        <?php do_action( 'woocommerce_product_meta_end' ); ?>
+    <?php endif;
+}
+
+?>
+<?php  ?>

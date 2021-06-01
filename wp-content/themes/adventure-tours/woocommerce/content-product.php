@@ -82,7 +82,9 @@ if ( has_term( 'charternye-rejsy', 'product_cat' ) ) {
                     <?php echo $product->get_attribute('data-pribytiya'); ?>
                 </div>
             </div>
-
+            <div class="current-ticket-lnk">
+                <a href="<?php the_permalink();?>">Заказать билет</a>
+            </div>
         </div>
     </div>
     <?php

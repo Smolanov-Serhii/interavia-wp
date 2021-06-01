@@ -16,6 +16,7 @@ if ( $is_sticky_header ) {
 	echo '<div class="header-wrap"><div class="header-wrap__backlog"></div>';
 }
 ?>
+<!--<div class="subject-works">Приносим свои извинения, страница находится в разработке. Скоро тут появится много полезного!</div>-->
 <header class="header" role="banner">
 	<div class="container">
 		<?php get_template_part( 'templates/header/info' ); ?>
