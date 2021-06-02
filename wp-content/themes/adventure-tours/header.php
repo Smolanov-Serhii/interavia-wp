@@ -22,25 +22,32 @@ if ( $is_sticky_header ) {
 		<?php get_template_part( 'templates/header/info' ); ?>
 		<div class="header__content-wrap">
 			<div class="row">
-				<div class="col-md-12 header__content">
-					<?php get_template_part( 'templates/header/logo' ); ?>
-					<?php if ( has_nav_menu( 'header-menu' ) ) : ?>
-					<nav class="main-nav-header" role="navigation">
-						<?php wp_nav_menu(array(
-							'theme_location' => 'header-menu',
-							'container' => 'ul',
-							'menu_class' => 'main-nav',
-							'menu_id' => 'navigation',
-							'depth' => 3,
-						)); ?>
-					</nav>
-					<?php endif; ?>
-					<div class="clearfix"></div>
-				</div><!-- .header__content -->
+                <div class="container">
+                    <div class="col-md-12 header__content">
+                        <?php get_template_part( 'templates/header/logo' ); ?>
+                        <?php if ( has_nav_menu( 'header-menu' ) ) : ?>
+                            <nav class="main-nav-header" role="navigation">
+                                <?php wp_nav_menu(array(
+                                    'theme_location' => 'header-menu',
+                                    'container' => 'ul',
+                                    'menu_class' => 'main-nav',
+                                    'menu_id' => 'navigation',
+                                    'depth' => 3,
+                                )); ?>
+                            </nav>
+                        <?php endif; ?>
+                        <div class="clearfix"></div>
+                    </div><!-- .header__content -->
+                </div>
 			</div>
 		</div><!-- .header__content-wrap -->
 	</div><!-- .container -->
 </header>
 <?php if ( $is_sticky_header ) { echo '</div>'; } ?>
-<?php get_template_part( 'templates/header/header-section' ); ?>
-<div class="container layout-container margin-top margin-bottom">
+<?php get_template_part( 'templates/header/header-section' );
+if ( has_term( 'charternye-rejsy', 'product_cat' ) ) {
+    $categorycharter = "categorycharter";
+} else {
+    $categorycharter = "";
+}?>
+<div class="container layout-container margin-top margin-bottom <?php echo $categorycharter;?>">

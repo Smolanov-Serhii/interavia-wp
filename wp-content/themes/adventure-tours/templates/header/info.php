@@ -39,11 +39,13 @@ if ( $need_invert ) {
 
 ?>
 <div class="header__info">
-	<div class="header__info__items-left"><?php echo $left_html; ?></div>
+    <div class="container">
+        <div class="header__info__items-left"><?php echo $left_html; ?></div>
 
-	<div class="header__info__items-right">
-		<?php echo $right_html; ?>
-		<?php get_template_part( 'templates/header/shop-cart' ); ?>
-		<?php get_template_part( 'templates/header/search' ); ?>
-	</div>
+        <div class="header__info__items-right">
+            <?php echo $right_html; ?>
+            <?php get_template_part( 'templates/header/shop-cart' ); ?>
+            <?php get_template_part( 'templates/header/search' ); ?>
+        </div>
+    </div>
 </div>

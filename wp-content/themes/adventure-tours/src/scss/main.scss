@@ -10,7 +10,7 @@
   background-color: #b9110d;
 }
 *{
-  font-family: 'Futura PT'!important;
+  //font-family: "Open Sans", sans-serif!important;
 }
 .disabled-item{
   pointer-events: none;
@@ -803,7 +803,161 @@ form.mage_form label {
 .woocommerce-variation-availability{
   margin-top: 20px;
 }
+#wpfMainWrapper-2_682983{
+  .label, li{
 
+    font-size: 14px!important;
+  }
+}
+#wpfBlock_5{
+  .selectric{
+    border-radius: 4px;
+  }
+}
+.main__wrap-form-list .filter-naprav .selectric .label, .main__wrap-form-list .filter-toback .selectric .label, .main__wrap-form-list #wpfBlock_11 .label, .main__wrap-form-list #wpfBlock_17 .label, .main__wrap-form-list #wpfBlock_5 .label{
+  color: #424242!important;
+}
+.categorycharter{
+  position: relative;
+  > .row{
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    &:before, &:after{
+      display: none;
+    }
+    justify-content: center;
+  }
+  &:before{
+    content: "";
+    display: block;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: calc(100% - 30px);
+    height: 100%;
+    background-color: #EEEEEE;
+  }
+  .sidebar{
+    width: 220px;
+    padding: 0;
+    margin-right: 20px;
+    #wpfwoofilterswidget-4{
+      background-color: transparent;
+      padding: 0;
+      box-shadow: none;
+      font-family: 'Open Sans', sans-serif!important;
+
+      .wpfFilterButton.wpfButton, .wpfClearButton.wpfButton{
+        width: 100%;
+        margin: 0;
+      }
+      .ui-widget-header{
+        background-color: #2571a4!important;
+      }
+      .wpfPriceInputs{
+        display: inline;
+        color: rgba(0,0,0,.4);
+        font-size: 13px!important;
+        line-height: 16px;
+        opacity: 1;
+        transition: opacity .2s ease;
+        .wpfFilterDelimeter{
+          margin: 0;
+        }
+      }
+      .ui-slider .ui-slider-handle{
+        top: -7px;
+        width: 16px;
+        height: 16px;
+        border: 3px solid #00afdd!important;
+        border-radius: 15px;
+        background-color: #fff;
+        cursor: pointer;
+        border-color: #2571a4!important;
+      }
+      .wpfFilterWrapper .ui-slider-horizontal{
+        height: 4px!important;
+        background-color: RGBA(0,0,0,.1) !important;
+        border: none!important;
+        top: 6px;
+      }
+      .wpfFilterVerScroll{
+        li{
+          margin-bottom: 10px;
+          .wpfCheckbox{
+
+          }
+        }
+      }
+      .wpfFilterTitle{
+        display: flex;
+        .fa-minus{
+          &:before{
+            position: relative;
+            display: inline-block;
+            top: -1px;
+            margin-left: 7px;
+            width: 9px;
+            height: 5px;
+            background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%206%204%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3Etriangle%3C%2Ftitle%3E%3Cpath%20fill%3D%22%23424242%22%20d%3D%22M3%204l3-4H0%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E);
+            background-repeat: no-repeat;
+            transition: transform 200ms cubic-bezier(.645,.045,.355,1);
+            transform: rotate(
+                            0deg
+            );
+            transform-origin: center;
+            content: '';
+          }
+        }
+        .fa-plus{
+          &:before{
+            position: relative;
+            display: inline-block;
+            top: -1px;
+            margin-left: 7px;
+            width: 9px;
+            height: 5px;
+            background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%206%204%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3Etriangle%3C%2Ftitle%3E%3Cpath%20fill%3D%22%23424242%22%20d%3D%22M3%204l3-4H0%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E);
+            background-repeat: no-repeat;
+            transition: transform 200ms cubic-bezier(.645,.045,.355,1);
+            transform-origin: center;
+            content: '';
+            transform: rotate(
+                            -90deg
+            ) translate3d(2px,0,0);
+          }
+        }
+      }
+      .wfpTitle{
+        color: #424242;
+        text-transform: uppercase;
+        font-size: 12px!important;
+        font-weight: 600;
+        line-height: 19px;
+        height: auto;
+        margin-bottom: 15px;
+
+      }
+      .wpfFilterTaxNameWrapper{
+        z-index: 1;
+        font-size: 13px!important;
+        font-weight: 400;
+        line-height: 16px;
+        cursor: pointer;
+      }
+    }
+  }
+  main.col-md-9{
+    max-width: 714px;
+    padding: 0;
+  }
+
+}
+.home .mewtwo-widget .mewtwo-flights--virgin div.mewtwo-stand-out input{
+  border-color: transparent!important;
+}
 @import "_fonts.scss";
 @import "_header.scss";
 @import "_section-main.scss";
