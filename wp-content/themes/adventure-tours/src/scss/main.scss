@@ -9,6 +9,13 @@
   color: #FFFFFF;
   background-color: #b9110d;
 }
+a{
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+    border-bottom: none;
+  }
+}
 *{
   //font-family: "Open Sans", sans-serif!important;
 }
@@ -277,6 +284,7 @@ div[class*='mage_default'] {
 }
 
 .reviewes {
+  padding-top: 80px;
   padding-bottom: 80px;
   background-color: white;
 
@@ -789,7 +797,12 @@ form.mage_form label {
       margin-top: 40px;
     }
     .woocommerce-product-attributes-item__value{
+      a{
+        text-align: right;
+        color: #000000;
+      }
       text-align: right;
+      color: #000000;
     }
     .product-box .row > .col-md-6{
       width: 200px;
@@ -819,6 +832,12 @@ form.mage_form label {
 }
 .categorycharter{
   position: relative;
+  .atgrid__row-separator{
+    display: none!important;
+  }
+  .charter-item__ticket{
+    margin-bottom: 20px;
+  }
   > .row{
     display: flex;
     padding-top: 40px;
@@ -957,6 +976,47 @@ form.mage_form label {
 }
 .home .mewtwo-widget .mewtwo-flights--virgin div.mewtwo-stand-out input{
   border-color: transparent!important;
+}
+.schedule{
+  &__charter{
+    &-item{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 9px;
+      border-top: 1px solid #E9E9E9;
+      &:last-child{
+        border-bottom: 1px solid #E9E9E9;
+      }
+    }
+    .time{
+      display: flex;
+      color: #000000;
+    }
+    .company{
+      display: flex;
+      align-items: center;
+      color: #000000;
+      img{
+        width: 50px;
+        height: auto;
+        margin-right: 20px;
+      }
+    }
+    .date{
+      color: #000000;
+    }
+    .abr{
+      display: flex;
+      color: #7D7D7D!important;
+    }
+    &-lnk{
+      color: #0085FF !important;
+      text-decoration: none !important;
+      font-family: "Open Sans", sans-serif!important;
+      font-size: 18px;
+    }
+  }
 }
 @import "_fonts.scss";
 @import "_header.scss";
