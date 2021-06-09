@@ -31,8 +31,6 @@ do_action( 'woocommerce_before_cart' ); ?>
 				<th class="product-thumbnail">&nbsp;</th>
 				<th class="product-name"><?php esc_html_e( 'Product', 'adventure-tours' ); ?></th>
 				<th class="product-price"><?php esc_html_e( 'Price', 'adventure-tours' ); ?></th>
-				<th class="product-quantity"><?php esc_html_e( 'Quantity', 'adventure-tours' ); ?></th>
-				<th class="product-subtotal"><?php esc_html_e( 'Subtotal', 'adventure-tours' ); ?></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -115,37 +113,6 @@ do_action( 'woocommerce_before_cart' ); ?>
 								echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
 							?>
 						</td>
-
-						<td class="product-quantity">
-							<span class="cart-responsive-title"><?php esc_html_e( 'Quantity', 'adventure-tours' ); ?></span>
-							<?php
-								if ( $_product->is_sold_individually() ) {
-									$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
-								} else {
-									$is_wc_older_than_30 = version_compare( WC_VERSION, '3.0.0', '<');
-									if ( $is_wc_older_than_30 ) {
-										$max_quantity = $_product->backorders_allowed() ? '' : $_product->get_stock_quantity();
-									} else {
-										$max_quantity = $_product->get_max_purchase_quantity();
-									}
-									$product_quantity = woocommerce_quantity_input( array(
-										'input_name'  => "cart[{$cart_item_key}][qty]",
-										'input_value' => $cart_item['quantity'],
-										'max_value'   => $max_quantity,
-										'min_value'   => '0'
-									), $_product, false );
-								}
-
-								echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key );
-							?>
-						</td>
-
-						<td class="product-subtotal">
-							<span class="cart-responsive-title"><?php esc_html_e( 'Subtotal', 'adventure-tours' ); ?></span>
-							<?php
-								echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key );
-							?>
-						</td>
 					</tr>
 					<?php
 				}
@@ -166,7 +133,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						</div>
 					<?php } ?>
 
-					<input type="submit" class="button cart-button cart-update-button" name="update_cart" value="<?php esc_attr_e( 'Update Cart', 'adventure-tours' ); ?>" />
+
 
 					<?php do_action( 'woocommerce_cart_actions' ); ?>
 

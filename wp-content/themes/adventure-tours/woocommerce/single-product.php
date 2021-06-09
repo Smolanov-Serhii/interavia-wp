@@ -16,51 +16,105 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! AtTourHelper::beforeWCTemplateRender( __FILE__ ) ) {
 	return;
 }
-
+global $post;
+global $product;
+global $woocommerce;
 get_header( 'shop' );
-?>
-
-<?php ob_start(); ?>
+if ( has_term( 'charternye-rejsy', 'product_cat' ) ) {
+	?>
+	<?php ob_start(); ?>
 	<?php
-		/**
-		 * woocommerce_before_main_content hook
-		 *
-		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-		 * @hooked woocommerce_breadcrumb - 20
-		 */
-		do_action( 'woocommerce_before_main_content' );
+	/**
+	 * woocommerce_before_main_content hook
+	 *
+	 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+	 * @hooked woocommerce_breadcrumb - 20
+	 */
+	do_action( 'woocommerce_before_main_content' );
 	?>
 
-		<?php while ( have_posts() ) : the_post(); ?>
+	<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php wc_get_template_part( 'content', 'single-product' ); ?>
+		<?php wc_get_template_part( 'content', 'single-ticket' ); ?>
 
-		<?php endwhile; // end of the loop. ?>
+	<?php endwhile; // end of the loop. ?>
 
 	<?php
-		/**
-		 * woocommerce_after_main_content hook
-		 *
-		 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
-		 */
-		do_action( 'woocommerce_after_main_content' );
+	/**
+	 * woocommerce_after_main_content hook
+	 *
+	 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
+	 */
+	do_action( 'woocommerce_after_main_content' );
 	?>
-<?php $primaryContent = ob_get_clean(); ?>
+	<?php $primaryContent = ob_get_clean(); ?>
 
-<?php ob_start(); ?>
-<?php
+	<?php ob_start(); ?>
+	<?php
 	/**
 	 * woocommerce_sidebar hook
 	 *
 	 * @hooked woocommerce_get_sidebar - 10
 	 */
 	do_action( 'woocommerce_sidebar' );
+	?>
+	<?php $sidebarContent = ob_get_clean(); ?>
+
+	<?php adventure_tours_render_template_part( 'templates/layout', '', array(
+		'content' => $primaryContent,
+		'sidebar' => $sidebarContent,
+	) ); ?>
+
+	<?php get_footer( 'shop' ); ?>
+	<?php
+} else {
+	?>
+	<?php ob_start(); ?>
+	<?php
+	/**
+	 * woocommerce_before_main_content hook
+	 *
+	 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+	 * @hooked woocommerce_breadcrumb - 20
+	 */
+	do_action( 'woocommerce_before_main_content' );
+	?>
+
+	<?php while ( have_posts() ) : the_post(); ?>
+
+		<?php wc_get_template_part( 'content', 'single-product' ); ?>
+
+	<?php endwhile; // end of the loop. ?>
+
+	<?php
+	/**
+	 * woocommerce_after_main_content hook
+	 *
+	 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
+	 */
+	do_action( 'woocommerce_after_main_content' );
+	?>
+	<?php $primaryContent = ob_get_clean(); ?>
+
+	<?php ob_start(); ?>
+	<?php
+	/**
+	 * woocommerce_sidebar hook
+	 *
+	 * @hooked woocommerce_get_sidebar - 10
+	 */
+	do_action( 'woocommerce_sidebar' );
+	?>
+	<?php $sidebarContent = ob_get_clean(); ?>
+
+	<?php adventure_tours_render_template_part( 'templates/layout', '', array(
+		'content' => $primaryContent,
+		'sidebar' => $sidebarContent,
+	) ); ?>
+
+	<?php get_footer( 'shop' ); ?>
+
+	<?php
+}
 ?>
-<?php $sidebarContent = ob_get_clean(); ?>
 
-<?php adventure_tours_render_template_part( 'templates/layout', '', array(
-	'content' => $primaryContent,
-	'sidebar' => $sidebarContent,
-) ); ?>
-
-<?php get_footer( 'shop' ); ?>

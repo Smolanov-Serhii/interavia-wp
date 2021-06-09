@@ -53,38 +53,44 @@ if ( sizeof( $related_products ) == 1 ) {
 }
 
 $product_item_coll_size = 12 / $columns;
+if ( has_term( 'charternye-rejsy', 'product_cat' ) ) {
 
+} else {
+    ?>
+    <div class="related products margin-top atgrid">
+        <?php
+        $heading = apply_filters( 'woocommerce_product_related_products_heading', __( 'Related Products', 'adventure-tours' ) );
+        if ( $heading ) {
+            printf('<h2>%s</h2>', esc_html( $heading ) );
+        }
+        ?>
+        <?php woocommerce_product_loop_start(); ?>
+
+        <?php $item_index = 0; ?>
+        <?php foreach ( $related_products as $related_item ) : ?>
+            <?php
+            if ( $item_index > 0 && $item_index % $columns == 0 ) {
+                echo '<div class="atgrid__row-separator atgrid__row-separator--related-and-upsells clearfix"></div>';
+            }
+            $item_index++;
+            ?>
+            <div class="atgrid__item-wrap atgrid__item-wrap--related-and-upsells <?php print 'col-md-' . $product_item_coll_size; ?>">
+                <?php
+                $post_object = $is_wc_older_than_30 ? $related_item : get_post( $related_item->get_id() );
+                setup_postdata( $GLOBALS['post'] =& $post_object );
+                wc_get_template_part( 'content', 'product' );
+                ?>
+            </div>
+        <?php endforeach; ?>
+
+        <?php woocommerce_product_loop_end(); ?>
+
+    </div>
+    <?php
+}
 ?>
 
-<div class="related products margin-top atgrid">
-	<?php
-	$heading = apply_filters( 'woocommerce_product_related_products_heading', __( 'Related Products', 'adventure-tours' ) );
-	if ( $heading ) {
-		printf('<h2>%s</h2>', esc_html( $heading ) );
-	}
-	?>
-	<?php woocommerce_product_loop_start(); ?>
 
-		<?php $item_index = 0; ?>
-		<?php foreach ( $related_products as $related_item ) : ?>
-			<?php
-				if ( $item_index > 0 && $item_index % $columns == 0 ) {
-					echo '<div class="atgrid__row-separator atgrid__row-separator--related-and-upsells clearfix"></div>';
-				}
-				$item_index++;
-			?>
-			<div class="atgrid__item-wrap atgrid__item-wrap--related-and-upsells <?php print 'col-md-' . $product_item_coll_size; ?>">
-			<?php
-				$post_object = $is_wc_older_than_30 ? $related_item : get_post( $related_item->get_id() );
-				setup_postdata( $GLOBALS['post'] =& $post_object );
-				wc_get_template_part( 'content', 'product' );
-			?>
-			</div>
-		<?php endforeach; ?>
-
-	<?php woocommerce_product_loop_end(); ?>
-
-</div>
 
 <?php
 wp_reset_postdata();

@@ -25,10 +25,10 @@ $breadcrumbs_html = adventure_tours_render_template_part( 'templates/header/brea
 			<div class="header-section padding-left padding-right">
 				<div class="header-section__content<?php echo ( $breadcrumbs_html ? ' header-section__content--breadcrumbs' : ' header-section__content--title' ); ?>">
 				<?php
-					printf( '<div class="%s"><h1 class="header-section__title">%s</h1></div>',
-						$breadcrumbs_html ? 'header-section__title-wrap--breadcrumbs' : 'header-section__title-wrap',
-						esc_html( $title )
-					);
+//					printf( '<div class="%s"><h1 class="header-section__title">%s</h1></div>',
+//						$breadcrumbs_html ? 'header-section__title-wrap--breadcrumbs' : 'header-section__title-wrap',
+//						esc_html( $title )
+//					);
 
 					if ( $breadcrumbs_html ) {
 						printf( '<div class="breadcrumbs-wrap">%s</div>', $breadcrumbs_html );

@@ -61,7 +61,7 @@ $is_wc_older_than_30 = $is_wc_older_than_330 && version_compare( WC_VERSION, '3.
 	<tfoot>
 
 		<tr class="cart-subtotal">
-			<th><?php esc_html_e( 'Total', 'adventure-tours' ); ?></th>
+			<th><?php esc_html_e( 'Subtotal', 'adventure-tours' ); ?></th>
 			<td><?php wc_cart_totals_subtotal_html(); ?></td>
 		</tr>
 

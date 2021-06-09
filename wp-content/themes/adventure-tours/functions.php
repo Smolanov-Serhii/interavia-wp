@@ -511,7 +511,6 @@ add_theme_support( 'post-thumbnails' );
 
 register_nav_menus(array(
 	'header-menu' => esc_html__( 'Header Menu', 'adventure-tours' ),
-	'footer-menu' => esc_html__( 'Footer Menu', 'adventure-tours' ),
 	'login-menu' => esc_html__( 'Login Menu', 'adventure-tours' ),
 
 ));

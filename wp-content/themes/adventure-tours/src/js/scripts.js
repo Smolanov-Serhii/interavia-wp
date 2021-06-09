@@ -34,6 +34,14 @@ jQuery(document).ready(function($) {
         $(iframeHead).append(iframeCSS);
     });
 
+    if ($('.single-product').length){
+        $(function() {
+            if ($('.single-product .wapf-field-input').length){
+                $('select.wapf-input').selectric();
+            }
+        });
+    }
+
 
 
 
