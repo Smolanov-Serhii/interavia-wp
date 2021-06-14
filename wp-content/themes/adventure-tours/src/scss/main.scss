@@ -1137,7 +1137,7 @@ form.mage_form label {
         justify-content: space-between;
         align-items: center;
         .form-footer__desc{
-          width: 70%;
+          width: 100%; //100
           font-size: 3rem!important;
           line-height: 99%;
         }
@@ -1404,6 +1404,35 @@ form.mage_form label {
   a{
     color: #f00;
   }
+}
+.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--dashboard{
+  display: none;
+}
+.bron-button{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.layout-content .woocommerce-notices-wrapper .woocommerce-message{
+  padding: 20px 20px 20px 60px!important;
+  line-height: 20px!important;
+  position: relative;
+  .woocommerce-message-icon{
+    position: absolute;
+    top: 24px;
+    left: 30px;
+
+  }
+  > span{
+    display: none!important;
+  }
+  .button.wc-forward{
+    //display: none!important;
+  }
+}
+span.fhide{
+  display: none;
 }
 @import "_fonts.scss";
 @import "_header.scss";

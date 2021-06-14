@@ -45,6 +45,17 @@ if ( $product->is_in_stock() ) : ?>
             );
             ?>
         </div>
+        <?php
+
+        if ( has_term( 'charternye-rejsy', 'product_cat' ) ) {
+            ?>
+            <div class="bron-button container">
+                <button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button button alt">Забронировать билет</button>
+            </div>
+            <?php
+        }
+
+        ?>
         <div class="form-footer">
             <div class="form-footer__desc">
                 На следующем шаге вы сможете выбрать удобный способ оплаты. На выбор оплата с помощью кредитной или дебетовой карты или интернет-банкинга через службы FONDY, либо наличными в офисе г.Москва.
@@ -52,7 +63,7 @@ if ( $product->is_in_stock() ) : ?>
             <?php
             if ( has_term( 'charternye-rejsy', 'product_cat' ) ) {
                 ?>
-                <button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button button alt">Забронировать билет</button>
+
                 <?php
             } else {
                 ?>

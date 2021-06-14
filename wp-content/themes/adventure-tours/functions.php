@@ -1197,3 +1197,20 @@ function translate_text($translated) {
 add_filter( 'option_default_product_cat', function( $value, $option ) {
     return false;
 }, 9999, 2 );
+
+add_action( 'template_redirect', 'woo_custom_redirect_after_purchase' );
+function woo_custom_redirect_after_purchase() {
+    global $wp;
+    if ( is_checkout() && !empty( $wp->query_vars['order-received'] ) ) {
+        wp_redirect( get_home_url() . '/thank-you/' );
+        exit;
+    }
+}
+
+add_filter ('add_to_cart_redirect', 'redirect_to_checkout');
+
+function redirect_to_checkout() {
+    global $woocommerce;
+    $checkout_url = get_home_url() . '/shop/';
+    return $checkout_url;
+}
