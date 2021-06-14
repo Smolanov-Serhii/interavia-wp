@@ -1186,3 +1186,14 @@ function avia_widgets_init() {
     );
 }
 add_action( 'widgets_init', 'avia_widgets_init' );
+
+add_filter('gettext', 'translate_text');
+add_filter('ngettext', 'translate_text');
+
+function translate_text($translated) {
+    $translated = str_ireplace('Your password has been reset successfully! Please', 'Ваш пароль успешно обновлён! Войдите в кабинет используя новые данные.', $translated);
+    return $translated;
+}
+add_filter( 'option_default_product_cat', function( $value, $option ) {
+    return false;
+}, 9999, 2 );

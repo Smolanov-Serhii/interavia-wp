@@ -2,6 +2,12 @@
     width: 100%;
     background: radial-gradient(ellipse, #40A6D1, #297DB6);
     height: auto;
+    #newsletterwidget-2{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 130%;
+        color: #FFFFFF;
+    }
     &__text {
         font-size: 18px;
         color: #fff;
@@ -33,7 +39,7 @@
 
 .wrap__tx-form {
     margin-left: 11%;
-    width: 440px;
+    width: 510px;
 }
 
 .wrap__svg-letter {

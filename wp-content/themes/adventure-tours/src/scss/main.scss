@@ -2,6 +2,8 @@
 @import "_default.scss";
 @import "_normalize.scss";
 
+
+
 .subject-works{
   padding: 20px;
   font-size: 30px;
@@ -35,6 +37,9 @@ html {
 
   }
 }
+body{
+  background-color: #f6f6f6;
+}
 .woocommerce-page .woocommerce input.button, .woocommerce-page .woocommerce a.button, .woocommerce-page .woocommerce .button, .woocommerce-page input.button, .woocommerce-page a.button, .woocommerce-page .button, .woocommerce .woocommerce input.button, .woocommerce .woocommerce a.button, .woocommerce .woocommerce .button, .woocommerce input.button, .woocommerce a.button, .woocommerce .button{
   @include mainbutton;
   display: inline-flex;
@@ -47,6 +52,9 @@ html {
   &:hover{
     background-color: #FF3D38!important;
   }
+}
+.archive .layout-container{
+  background-color: #f6f6f6;
 }
 body {
   margin: 0;
@@ -66,6 +74,8 @@ body {
 
 * {
   box-sizing: border-box;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .flex {
@@ -367,9 +377,9 @@ div[class*='mage_default'] {
           }
 
           .wpmtst-testimonial__wrapper {
-            width: 100%;
+            width: calc(100% - 110px);
             border-radius: 8px;
-            padding: 0 0 0 30px;
+            padding: 0;
             position: relative;
             @media all and (max-width: 600px) {
               width: 100%;
@@ -837,10 +847,16 @@ form.mage_form label {
 .main__wrap-form-list .filter-naprav .selectric .label, .main__wrap-form-list .filter-toback .selectric .label, .main__wrap-form-list #wpfBlock_11 .label, .main__wrap-form-list #wpfBlock_17 .label, .main__wrap-form-list #wpfBlock_5 .label{
   color: #424242!important;
 }
-.categorycharter{
+.layout-container{
   position: relative;
   .atgrid__row-separator{
     display: none!important;
+  }
+  .wfpClickable{
+    .wpfTitleToggle{
+      margin-bottom: 10px;
+
+    }
   }
   .charter-item__ticket{
     margin-bottom: 20px;
@@ -874,7 +890,9 @@ form.mage_form label {
       padding: 0;
       box-shadow: none;
       font-family: 'Open Sans', sans-serif!important;
+      .wpfFilterContent{
 
+      }
       .wpfFilterButton.wpfButton, .wpfClearButton.wpfButton{
         width: 100%;
         margin: 0;
@@ -903,6 +921,12 @@ form.mage_form label {
         cursor: pointer;
         border-color: #2571a4!important;
       }
+      .wpfFilterWrapper{
+        padding: 0;
+        margin: 0;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+      }
       .wpfFilterWrapper .ui-slider-horizontal{
         height: 4px!important;
         background-color: RGBA(0,0,0,.1) !important;
@@ -911,12 +935,13 @@ form.mage_form label {
       }
       .wpfFilterVerScroll{
         li{
-          margin-bottom: 10px;
+          margin-bottom: 0;
           .wpfCheckbox{
 
           }
         }
       }
+
       .wpfFilterTitle{
         display: flex;
         .fa-minus{
@@ -963,7 +988,7 @@ form.mage_form label {
         font-weight: 600;
         line-height: 19px;
         height: auto;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
 
       }
       .wpfFilterTaxNameWrapper{
@@ -972,6 +997,7 @@ form.mage_form label {
         font-weight: 400;
         line-height: 16px;
         cursor: pointer;
+        color: #444;
       }
     }
   }
@@ -1210,6 +1236,173 @@ form.mage_form label {
         background-color: #F6F6F6;
       }
     }
+  }
+}
+.page-single{
+  background-color: #f6f6f6;
+  *{
+    line-height: 112%;
+  }
+  img{
+    filter: drop-shadow(0px 4px 17px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+  }
+}
+.xoo-el-inmodal{
+  min-height: 420px;
+  //height: auto;
+  .xoo-el-header{
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  .xoo-el-close{
+    top: 14px;
+    right: 10px;
+    border: none;
+    border-radius: 0;
+    &:before{
+      display: none;
+    }
+  }
+  .xoo-el-sidebar{
+    width: 280px;
+    min-width: auto;
+  }
+  .xoo-el-srcont{
+    width: calc(100% - 280px);
+  }
+  .xoo-el-action-form{
+    text-align: center;
+  }
+  .xoo-el-form-container{
+    padding-bottom: 0;
+  }
+  .xoo-el-form-container button.btn.button.xoo-el-action-btn{
+    margin: auto;
+    height: auto;
+    background: #B9110D;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 99%;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    padding: 17px 106px;
+  }
+  .xoo-aff-checkbox_single{
+    a{
+      margin-left: 10px;
+      text-decoration: underline;
+    }
+  }
+  .xoo-el-main{
+    padding: 60px;
+  }
+  .xoo-el-section{
+    padding: 0;
+  }
+  .xoo-el-login-btm-fields, .xoo-aff-required{
+    label{
+      display: flex;
+      align-items: center;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    line-height: 99%;
+    letter-spacing: 0.03em;
+    color: #092C6D;
+    span, a, label{
+      font-size: 18px;
+      line-height: 99%;
+      letter-spacing: 0.03em;
+      color: #092C6D;
+      font-weight: 400;
+    }
+    .xoo-el-form-label{
+      margin-bottom: 0;
+    }
+  }
+  .xoo-aff-group{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .xoo-aff-input-group{
+    input{
+      font-size: 16px;
+      line-height: 99%;
+      letter-spacing: 0.03em;
+      color: #092C6D;
+      border: 1px solid #B7B7C6;
+      border-radius: 4px;
+      &::placeholder{
+        font-size: 16px;
+        line-height: 99%;
+        letter-spacing: 0.03em;
+        color: #092C6D;
+        font-family: 'Futura PT'!important;
+      }
+    }
+    .xoo-aff-input-icon{
+      display: none;
+    }
+  }
+  .xoo-el-tabs{
+    display: flex;
+    justify-content: space-between;
+    .xoo-el-reg-tgr, .xoo-el-login-tgr{
+      background: #FFFFFF;
+      border: 1px solid #B7B7C6;
+      border-radius: 4px;
+      font-size: 16px;
+      line-height: 99%;
+      letter-spacing: 0.03em;
+      color: #092C6D;
+      width: calc(50% - 10px);
+    }
+    .xoo-el-login-tgr{
+      margin-right: 20px;
+    }
+    .xoo-el-active{
+      border: 1px solid #DC6400;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      color: #092C6D!important;
+      background-color: white!important;
+    }
+
+  }
+}
+.xoo-el-wrap{
+  .xoo-aff-group input[type="email"], .xoo-aff-group input[type="number"], .xoo-aff-group input[type="password"], .xoo-aff-group input[type="text"], .xoo-aff-group select{
+    height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.xoo-el-form-container button.btn.button.xoo-el-action-btn{
+  height: auto;
+}
+.xoo-aff-required.xoo-aff-password{
+
+}
+.xoo-aff-group input[type="text"], .xoo-aff-group input[type="password"], .xoo-aff-group input[type="email"], .xoo-aff-group input[type="number"], .xoo-aff-group select{
+  padding: 12px 15px;
+}
+.woocommerce-MyAccount-content{
+  a{
+    color: #f00;
+  }
+}
+.xoo-el-notice-success{
+  a{
+    color: #f00;
   }
 }
 @import "_fonts.scss";

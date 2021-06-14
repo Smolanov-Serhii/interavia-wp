@@ -33,7 +33,7 @@ const scriptFiles = [
    // './src/js/feedback.js',
    // './src/js/jquery.selectric.js',
    // './src/js/swiper-bundle.js',
-   // './src/js/fresco.min.js',
+   './src/js/jquery.maskedinput.js',
    './src/js/scripts.js'
 
 ]

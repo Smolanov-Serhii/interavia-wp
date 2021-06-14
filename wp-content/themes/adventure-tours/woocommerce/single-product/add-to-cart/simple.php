@@ -20,16 +20,16 @@ defined( 'ABSPATH' ) || exit;
 global $product;
 
 if ( ! $product->is_purchasable() ) {
-	return;
+    return;
 }
 
 echo wc_get_stock_html( $product ); // WPCS: XSS ok.
 
 if ( $product->is_in_stock() ) : ?>
 
-	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
+    <?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
-	<form class="cart container" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
+    <form class="cart container" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
         <div class="form-header">
             <?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
@@ -47,11 +47,11 @@ if ( $product->is_in_stock() ) : ?>
         </div>
         <div class="form-footer">
             <div class="form-footer__desc">
-                Нажав кнопку “Забронировать билет”, вы перейдёте на страницу оплаты, где сможете завершить покупку.
+                На следующем шаге вы сможете выбрать удобный способ оплаты. На выбор оплата с помощью кредитной или дебетовой карты или интернет-банкинга через службы FONDY, либо наличными в офисе г.Москва.
             </div>
             <?php
             if ( has_term( 'charternye-rejsy', 'product_cat' ) ) {
-            ?>
+                ?>
                 <button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button button alt">Забронировать билет</button>
                 <?php
             } else {
@@ -66,9 +66,9 @@ if ( $product->is_in_stock() ) : ?>
 
 
 
-		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
-	</form>
+        <?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+    </form>
 
-	<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
+    <?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
 
 <?php endif; ?>
