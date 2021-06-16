@@ -1035,14 +1035,20 @@ form.mage_form label {
         border-bottom: 1px solid #E9E9E9;
       }
     }
+    .day{
+      width: 16.7%;
+      text-align: center;
+    }
     .time{
       display: flex;
       color: #000000;
+      width: 17%;
     }
     .company{
       display: flex;
       align-items: center;
       color: #000000;
+      width: 33.5%;
       img{
         width: 50px;
         height: auto;
@@ -1055,12 +1061,16 @@ form.mage_form label {
     .abr{
       display: flex;
       color: #7D7D7D!important;
+      width: 16.7%;
+
     }
     &-lnk{
       color: #0085FF !important;
       text-decoration: none !important;
       font-family: "Open Sans", sans-serif!important;
       font-size: 18px;
+      width: 15.9%;
+      text-align: right;
     }
   }
 }
