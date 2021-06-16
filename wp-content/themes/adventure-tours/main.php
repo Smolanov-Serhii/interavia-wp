@@ -8,7 +8,14 @@ get_header();
 
 ?>
 
-    <section class="main" style="background-image: url(<?php echo the_field('kartinka_v_shapku', 3311) ?>">
+    <section class="main">
+        <div class="main__bg">
+            <picture>
+                <source media="(min-width: 500px)"
+                        srcset="<?php the_field('kartinka_v_shapku', 3311)?>">
+                <img src="<?php the_field('kartinka_v_shapku_mobajl', 3311)?>" alt="">
+            </picture>
+        </div>
         <div class="conteiner column">
             <div class="wrap-h1">
                 <h1>

@@ -88,8 +88,21 @@ body {
   width: 100%;
   height: auto;
   margin: auto;
+  @media screen and (max-width: 1276px) {
+    padding: 0 50px;
+  }
+  @media screen and (max-width: 992px) {
+    padding: 0 30px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0 20px;
+  }
 }
-
+.container{
+  @media screen and (max-width: 768px) {
+    padding: 0 20px;
+  }
+}
 .column {
   display: flex;
   flex-direction: column;
@@ -247,19 +260,19 @@ div[class*='mage_default'] {
 }
 
 .account-icon {
-  margin-left: 20px;
+  //margin-left: 20px;
 
-  &:before {
-    content: "";
-    display: block;
-    width: 24px;
-    height: 24px;
-    //background-image: url("../../images/login-icon.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    margin-right: 5px;
-  }
+  //&:before {
+  //  content: "";
+  //  display: block;
+  //  width: 24px;
+  //  height: 24px;
+  //  //background-image: url("../../images/login-icon.svg");
+  //  background-repeat: no-repeat;
+  //  background-size: contain;
+  //  background-position: center;
+  //  margin-right: 5px;
+  //}
 }
 
 .logout-icon, .login-icon, .account-icon {
@@ -848,7 +861,7 @@ form.mage_form label {
   color: #424242!important;
 }
 .layout-container{
-  position: relative;
+  //position: relative;
   .atgrid__row-separator{
     display: none!important;
   }
@@ -1227,9 +1240,31 @@ form.mage_form label {
     color: darkred;
   }
 }
+.woocommerce-MyAccount-content{
+  mark{
+    background-color: transparent;
+  }
+}
+.woocommerce table.shop_table th, .woocommerce table.shop_table td{
+  padding: 10px;
+}
+.woocommerce .MyAccount-navigation-link--downloads{
+  display: none!important;
+}
+.woocommerce .woocommerce-MyAccount-navigation > ul{
+  li:nth-child(3){
+    display: none!important;
+  }
+}
+.archive .layout-container>.row .col-xs-12, .page-single{
+  background-color: transparent;
+}
+.layout-container:before{
+  background-color: transparent;
+}
 .archive{
   .layout-container{
-    background-color: #F6F6F6;
+    background-color: transparent;
     >.row{
       padding: 0;
       .col-xs-12{
