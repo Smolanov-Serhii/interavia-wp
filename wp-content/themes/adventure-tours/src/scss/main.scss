@@ -1038,6 +1038,12 @@ form.mage_form label {
     .day{
       width: 16.7%;
       text-align: center;
+      span{
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 500;
+        color: #000000;
+      }
     }
     .time{
       display: flex;
@@ -1060,6 +1066,10 @@ form.mage_form label {
     }
     .abr{
       display: flex;
+      flex-direction: column;
+      .top, .bottom{
+        display: flex;
+      }
       color: #7D7D7D!important;
       width: 16.7%;
 

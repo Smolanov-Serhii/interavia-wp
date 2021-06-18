@@ -1194,6 +1194,15 @@ function translate_text($translated) {
     $translated = str_ireplace('Your password has been reset successfully! Please', 'Ваш пароль успешно обновлён! Войдите в кабинет используя новые данные.', $translated);
     return $translated;
 }
+
+add_filter('gettext', 'translate_text2');
+add_filter('ngettext', 'translate_text2');
+
+function translate_text2($translated) {
+    $translated = str_ireplace('Забронировать', 'Перейти к оплате', $translated);
+    return $translated;
+}
+
 add_filter( 'option_default_product_cat', function( $value, $option ) {
     return false;
 }, 9999, 2 );

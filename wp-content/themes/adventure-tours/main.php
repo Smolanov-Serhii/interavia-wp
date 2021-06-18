@@ -140,12 +140,23 @@ get_header();
                             <?php echo $product->get_attribute('aviakompaniya'); ?>
                         </div>
                         <div class="abr">
-                            <div class="start-abr">
-                                <?php echo $product->get_attribute('iso-start'); ?>
+                            <div class="top">
+                                <div class="start-abr">
+                                    <?php echo $product->get_attribute('iso-start'); ?>
+                                </div>
+                                &nbsp-&nbsp
+                                <div class="end-abr">
+                                    <?php echo $product->get_attribute('iso-end'); ?>
+                                </div>
                             </div>
-                            &nbsp-&nbsp
-                            <div class="end-abr">
-                                <?php echo $product->get_attribute('iso-end'); ?>
+                            <div class="bottom">
+                                <div class="start-abr">
+                                    <?php echo $product->get_attribute('otkuda'); ?>
+                                </div>
+                                &nbsp-&nbsp
+                                <div class="end-abr">
+                                    <?php echo $product->get_attribute('kuda'); ?>
+                                </div>
                             </div>
                         </div>
                         <div class="day">
