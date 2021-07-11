@@ -118,26 +118,24 @@ get_header();
                     'order' => 'DESC'
                 );
                 $query = new WP_Query($args);
-
-
                 while ($query->have_posts()) {
                     $query->the_post();
                     ?>
-
                     <div class="schedule__charter-item">
-
-                        <div class="time">
-                            <div class="time-start">
-                                <?php echo $product->get_attribute('vremya-otbytiya'); ?>
+                        <div class="part-block">
+                            <div class="time">
+                                <div class="time-start">
+                                    <?php echo $product->get_attribute('vremya-otbytiya'); ?>
+                                </div>
+                                &nbsp;→&nbsp;
+                                <div class="time-end">
+                                    <?php echo $product->get_attribute('vremya-pribytiya'); ?>
+                                </div>
                             </div>
-                            &nbsp;→&nbsp;
-                            <div class="time-end">
-                                <?php echo $product->get_attribute('vremya-pribytiya'); ?>
+                            <div class="company">
+                                <?php the_post_thumbnail("thumbnail"); ?>
+                                <?php echo $product->get_attribute('aviakompaniya'); ?>
                             </div>
-                        </div>
-                        <div class="company">
-                            <?php the_post_thumbnail("thumbnail"); ?>
-                            <?php echo $product->get_attribute('aviakompaniya'); ?>
                         </div>
                         <div class="abr">
                             <div class="top">
@@ -159,41 +157,21 @@ get_header();
                                 </div>
                             </div>
                         </div>
-                        <div class="day">
+                        <div class="right-block">
+                            <div class="day">
                             <span class="day-item">
                                 <?php echo $product->get_attribute('den-nedeli'); ?>
                             </span>
+                            </div>
+                            <a href="<?php the_permalink(); ?>" class="schedule__charter-lnk">
+                                подробнее
+                            </a>
                         </div>
-                        <a href="<?php the_permalink(); ?>" class="schedule__charter-lnk">
-                            подробнее
-                        </a>
-
                     </div>
-
                     <?php
-
-
                 }
-
                 wp_reset_postdata();
                 ?>
-            </div>
-            <!--        <div class="popular">-->
-            <!--            <script src="//tp.media/content?currency=usd&promo_id=4044&shmarker=321113&campaign_id=100&trs=130415&target_host=avia.interaviacentr.ru%2Fflights&locale=ru&limit=6&powered_by=false&destination=MOW" charset="utf-8"></script>-->
-            <!--            <script src="//tp.media/content?currency=usd&promo_id=4044&shmarker=321113&campaign_id=100&trs=130415&target_host=avia.interaviacentr.ru%2Fflights&locale=ru&limit=6&powered_by=false&destination=MSQ" charset="utf-8"></script>-->
-            <!--            <script src="//tp.media/content?currency=usd&promo_id=4044&shmarker=321113&campaign_id=100&trs=130415&target_host=avia.interaviacentr.ru%2Fflights&locale=ru&limit=6&powered_by=false&destination=SIP" charset="utf-8"></script>-->
-            <!--            <script src="//tp.media/content?currency=usd&promo_id=4044&shmarker=321113&campaign_id=100&trs=130415&target_host=avia.interaviacentr.ru%2Fflights&locale=ru&limit=6&powered_by=false&destination=LED" charset="utf-8"></script>-->
-            <!--            <script src="//tp.media/content?currency=usd&promo_id=4044&shmarker=321113&campaign_id=100&trs=130415&target_host=avia.interaviacentr.ru%2Fflights&locale=ru&limit=6&powered_by=false&destination=LED" charset="utf-8"></script>-->
-            <!--            <script src="//tp.media/content?currency=usd&promo_id=4044&shmarker=321113&campaign_id=100&trs=130415&target_host=avia.interaviacentr.ru%2Fflights&locale=ru&limit=6&powered_by=false&destination=LED" charset="utf-8"></script>-->
-            <!--        </div>-->
-
-            <div class="schedule__wrap__big-but">
-                <!--            <a href="--><?php //echo the_field('ssylka_na_knopku', 3311)?><!--">-->
-                <!--                <div class="big__button">-->
-                <!--                    <span class="big-small__but_content">-->
-                <?php //echo the_field('nadpis_na_knopke', 3311)?><!--</span>-->
-                <!--                </div>-->
-                <!--            </a>-->
             </div>
         </div>
     </section>
@@ -204,15 +182,6 @@ get_header();
             </div>
             <script src="//tp.media/content?promo_id=2811&shmarker=321113&campaign_id=100&trs=130415&color_button=%23FF0000&target_host=avia.interaviacentr.ru%2Fflights&locale=ru&powered_by=false&airline=&non_direct_flights=true&min_lines=5&border_radius=0&color_background=%23FFFFFF&color_text=%23000000&color_border=%23FFFFFF&destination=BKK&origin=MSQ"
                     charset="utf-8"></script>
-            <div class="schedule__wrap__big-but">
-                <!--            <a href="-->
-                <?php //echo the_field('ssylka_na_knopku_raspisanie_aviarejsov', 3311)?><!--">-->
-                <!--                <div class="big__button">-->
-                <!--                    <span class="big-small__but_content">-->
-                <?php //echo the_field('nadpis_na_knopke_raspisanie_aviarejsov', 3311)?><!--</span>-->
-                <!--                </div>-->
-                <!--            </a>-->
-            </div>
         </div>
     </section>
     <section class="mailing">
@@ -232,16 +201,11 @@ get_header();
     <section class="reviewes">
         <h2 class="reviewes__title">
             Отзывы
-            <!--            --><?php //the_field('zagolovok_bloka_otzyvy', 12);?>
         </h2>
-        <div class="reviewes__content container">
+        <div class="reviewes__content conteiner">
             <?php echo do_shortcode('[testimonial_view id="1"]') ?>
         </div>
-        <!--        <div class="reviewes__lnk">-->
-        <!--            <a class="brown-button" href="-->
-        <?php //echo get_home_url(); ?><!--/otzyvy/" target="_blank">Ещё отзывы</a>-->
-        <!--        </div>-->
     </section>
-
+<!--    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>-->
 
 <?php get_footer(); ?>

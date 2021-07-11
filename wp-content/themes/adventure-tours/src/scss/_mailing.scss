@@ -8,6 +8,11 @@
         line-height: 130%;
         color: #FFFFFF;
     }
+    .flex{
+        @media all and (max-width: 768px) {
+            display: block;
+        }
+    }
     &__text {
         font-size: 18px;
         color: #fff;
@@ -40,10 +45,34 @@
 .wrap__tx-form {
     margin-left: 11%;
     width: 510px;
+    @media all and (max-width: 768px) {
+        width: 100%;
+        margin-left: 0;
+        .mailing__text, h2{
+            text-align: center;
+        }
+        .tnp-field-email{
+            flex: 1;
+            input{
+                width: 100% !important;
+            }
+        }
+        .tnp-field-button{
+
+        }
+    }
 }
 
 .wrap__svg-letter {
     display: flex;
+    @media all and (max-width: 768px) {
+        display: block;
+        text-align: center;
+        img{
+            max-width: 300px;
+            height: auto;
+        }
+    }
     img {
         margin-top: 20px;
     }

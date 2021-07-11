@@ -1,4 +1,5 @@
 @import "selectric.scss";
+@import "_slick.scss";
 @import "_default.scss";
 @import "_normalize.scss";
 
@@ -24,6 +25,9 @@ a{
 .disabled-item{
   pointer-events: none;
   opacity: 0.5;
+  @media screen and (max-width: 768px) {
+    display: none!important;
+  }
 }
 .tours-tabs .nav-tabs li.active a, .tours-tabs .nav-tabs li a{
   font-family: 'Futura PT'!important;
@@ -81,7 +85,11 @@ body {
 .flex {
   display: flex;
 }
-
+.container{
+  @media screen and (max-width: 500px) {
+    padding: 0;
+  }
+}
 .conteiner {
   max-width: 1300px;
   padding: 0 100px;
@@ -97,10 +105,8 @@ body {
   @media screen and (max-width: 768px) {
     padding: 0 20px;
   }
-}
-.container{
-  @media screen and (max-width: 768px) {
-    padding: 0 20px;
+  @media screen and (max-width: 500px) {
+    padding: 0 15px;
   }
 }
 .column {
@@ -122,6 +128,10 @@ h2 {
   font-size: 36px;
   color: #092C6D;
   text-align: center;
+  @media screen and  (max-width: 768px) {
+    font-weight: 500;
+    font-size: 30px;
+  }
 }
 
 h3 {
@@ -244,37 +254,6 @@ div[class*='mage_default'] {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
 
-
-.logout-icon, .login-icon {
-  &:before {
-    content: "";
-    display: block;
-    width: 24px;
-    height: 24px;
-    //background-image: url("../../images/inout.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    margin-right: 5px;
-  }
-}
-
-.account-icon {
-  //margin-left: 20px;
-
-  //&:before {
-  //  content: "";
-  //  display: block;
-  //  width: 24px;
-  //  height: 24px;
-  //  //background-image: url("../../images/login-icon.svg");
-  //  background-repeat: no-repeat;
-  //  background-size: contain;
-  //  background-position: center;
-  //  margin-right: 5px;
-  //}
-}
-
 .logout-icon, .login-icon, .account-icon {
   display: flex;
   align-items: center;
@@ -310,17 +289,27 @@ div[class*='mage_default'] {
   padding-top: 80px;
   padding-bottom: 80px;
   background-color: white;
-
+  &__content{
+    @media all and (max-width: 500px) {
+      width: 100vw;
+      padding: 0!important;
+    }
+  }
+  .strong-content{
+    @media all and (max-width: 500px) {
+      flex-wrap: nowrap!important;
+    }
+  }
+  .strong-view{
+    @media all and (max-width: 500px) {
+      padding: 0 15px!important;
+    }
+  }
   .brown-button {
     margin-bottom: 0;
   }
 
-  .container {
-    max-width: 1300px;
-    padding: 0 100px;
-    width: 100%;
-    height: auto;
-    margin: auto;
+  .conteiner {
 
   }
 
@@ -358,6 +347,14 @@ div[class*='mage_default'] {
       border-radius: 4px;
       height: auto;
       padding: 31px 20px 32px 40px;
+      @media all and (max-width: 900px) {
+        padding: 20px;
+        margin-right: 10px!important;
+      }
+      @media all and (max-width: 520px) {
+        width: 100%;
+        margin-bottom: 15px;
+      }
 
       .wpmtst-testimonial-inner {
         border: none !important;
@@ -366,15 +363,17 @@ div[class*='mage_default'] {
         .wpmtst-testimonial-content {
           display: flex;
           justify-content: space-between;
-          @media all and (max-width: 600px) {
+          @media all and (max-width: 900px) {
             flex-direction: column;
           }
-
+          .slick-list{
+            padding: 0;
+          }
           .wpmtst-testimonial-image {
             width: 80px;
             height: 80px;
             margin: 0;
-            @media all and (max-width: 600px) {
+            @media all and (max-width: 900px) {
               margin-bottom: 20px;
               margin-right: auto;
               margin-left: auto;
@@ -394,8 +393,9 @@ div[class*='mage_default'] {
             border-radius: 8px;
             padding: 0;
             position: relative;
-            @media all and (max-width: 600px) {
+            @media all and (max-width: 900px) {
               width: 100%;
+              text-align: center;
             }
             @media all and (max-width: 500px) {
               padding: 20px;
@@ -415,7 +415,6 @@ div[class*='mage_default'] {
               color: #403F3E;
               margin-bottom: 7px;
               text-align: left;
-
               &.testimonial-name {
                 text-align: left;
                 font-size: 1.12em;
@@ -423,6 +422,9 @@ div[class*='mage_default'] {
                 color: #092C6D;
                 font-weight: 600;
                 margin-bottom: 10px;
+                @media all and (max-width: 900px) {
+                  text-align: center;
+                }
               }
             }
           }
@@ -490,15 +492,23 @@ form.mage_form label {
 }
 
 .mailing {
+  @media all and (max-width: 1024px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
   .mailing {
     background: transparent;
   }
+
 }
 
 #newsletterwidget-2 {
   .tnp.tnp-widget form {
     display: flex;
     margin-top: 27px;
+    @media all and (max-width: 1024px) {
+      flex-direction: column;
+    }
   }
 
   .tnp-field {
@@ -513,6 +523,9 @@ form.mage_form label {
     text-align: start;
     margin-right: 10px;
     margin-bottom: 0;
+    @media all and (max-width: 1024px) {
+      margin-bottom: 20px;
+    }
 
     &::placeholder {
       font-size: 16px;
@@ -523,6 +536,11 @@ form.mage_form label {
   input.tnp-submit {
     padding: 13px 32px;
     height: 100%;
+    @media all and (max-width: 1024px) {
+      margin-bottom: 20px;
+      width: auto;
+      margin: auto;
+    }
   }
 }
 
@@ -859,6 +877,9 @@ form.mage_form label {
 }
 .main__wrap-form-list .filter-naprav .selectric .label, .main__wrap-form-list .filter-toback .selectric .label, .main__wrap-form-list #wpfBlock_11 .label, .main__wrap-form-list #wpfBlock_17 .label, .main__wrap-form-list #wpfBlock_5 .label{
   color: #424242!important;
+  @media screen and (max-width: 768px) {
+
+  }
 }
 .layout-container{
   //position: relative;
@@ -1031,6 +1052,63 @@ form.mage_form label {
       align-items: center;
       padding: 9px;
       border-top: 1px solid #E9E9E9;
+      @media screen and (max-width: 500px) {
+        flex-wrap: wrap;
+        padding: 9px 0;
+      }
+      .right-block{
+        width: 32.6%;
+        display: flex;
+        flex-wrap: wrap;
+        @media screen and (max-width: 628px) {
+          flex-direction: column;
+        }
+        @media screen and (max-width: 500px) {
+          width: 100%;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .day{
+          width: 32%;
+          @media screen and (max-width: 628px) {
+            width: 100%;
+          }
+          @media screen and (max-width: 500px) {
+            width: auto;
+          }
+        }
+        .schedule__charter-lnk{
+          width: 68%;
+          @media screen and (max-width: 628px) {
+            width: 100%;
+          }
+          @media screen and (max-width: 500px) {
+            width: auto;
+          }
+        }
+      }
+      .part-block{
+        width: 50.7%;
+        display: flex;
+        flex-wrap: wrap;
+        @media screen and (max-width: 828px) {
+          width: 30%;
+        }
+        .time{
+          width: 32%;
+          @media screen and (max-width: 828px) {
+            width: 100%;
+          }
+        }
+        .company{
+          width: 68%;
+          @media screen and (max-width: 828px) {
+            width: 100%;
+          }
+        }
+      }
       &:last-child{
         border-bottom: 1px solid #E9E9E9;
       }
@@ -1072,6 +1150,11 @@ form.mage_form label {
       }
       color: #7D7D7D!important;
       width: 16.7%;
+      @media screen and (max-width: 500px) {
+        width: auto;
+        text-align: right;
+        align-items: flex-end;
+      }
 
     }
     &-lnk{

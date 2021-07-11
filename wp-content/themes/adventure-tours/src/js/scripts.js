@@ -101,5 +101,14 @@ jQuery(document).ready(function($) {
             }
         })();
     });
+    if ($(window).width() <= 500) {
+        var revslider = new Swiper(".reviewes .swiper-container", {
+            slidesPerView: 1.2,
+            spaceBetween: 10,
+
+        });
+    }
+
+
 
 });
