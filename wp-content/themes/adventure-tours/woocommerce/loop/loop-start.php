@@ -10,7 +10,7 @@
 if ( has_term( 'charternye-rejsy', 'product_cat' ) ) {
     $producttrigger = "charter";
 } else {
-    $producttrigger = "";
+    $producttrigger = "charter";
 }
 
 ?>

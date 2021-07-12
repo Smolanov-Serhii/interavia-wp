@@ -133,34 +133,6 @@ if ( has_term( 'charternye-rejsy', 'product_cat' ) ) {
             </div>
         </div>
     </div>
-<!--    <div --><?php //wc_product_class('atgrid__item', $product) ?><!-->-->
-<!--        <div class="atgrid__item__top">-->
-<!--            <a href="--><?php //the_permalink(); ?><!--" class="atgrid__item__top__image">--><?php //echo woocommerce_get_product_thumbnail(); ?><!--</a>-->
-<!--            --><?php //if ( $product->is_on_sale() ) { ?>
-<!--                <div class="atgrid__item__angle-wrap"><div class="atgrid__item__angle">--><?php //esc_html_e( 'On Sale', 'adventure-tours' ); ?><!--</div></div>-->
-<!--            --><?php //} ?>
-<!--            <div class="atgrid__item__price">-->
-<!--                --><?php //if ( $price_html ) {
-//                    printf( '<a href="%s" class="atgrid__item__price__button">%s</a>',
-//                        esc_url( get_permalink() ),
-//                        $price_html
-//                    );
-//                } ?>
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="atgrid__item__content">-->
-<!--            <h3 class="atgrid__item__title"><a href="--><?php //the_permalink(); ?><!--">--><?php //the_title(); ?><!--</a></h3>-->
-<!--            <div class="atgrid__item__description">--><?php //echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ) ?><!--</div>-->
-<!--        </div>-->
-<!--        <div class="item-attributes">-->
-<!--            --><?php //adventure_tours_render_product_attributes(array(
-//                'before_each' => '<div class="item-attributes__item">',
-//                'after_each' => '</div>',
-//                'limit' => 3,
-//            )) ?>
-<!--            <div class="item-attributes__item"><a href="--><?php //the_permalink(); ?><!--" class="item-attributes__link">--><?php //esc_html_e('view', 'adventure-tours'); ?><!--<i class="fa fa-long-arrow-right"></i></a></div>-->
-<!--        </div>-->
-<!--    </div>-->
     <?php
 
 }

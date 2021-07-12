@@ -31,7 +31,8 @@ const scriptFiles = [
    // './src/js/aos.js',
    // './src/js/slick.js',
    // './src/js/feedback.js',
-   // './src/js/jquery.selectric.js',
+   './src/js/jquery.magnific-popup.min.js',
+   './src/js/jquery.slicknav.min.js',
    './src/js/swiper-bundle.js',
    './src/js/jquery.maskedinput.js',
    './src/js/scripts.js'

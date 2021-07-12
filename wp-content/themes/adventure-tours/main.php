@@ -113,7 +113,7 @@ get_header();
                 $args = array(
                     'showposts' => 10,
                     'post_type' => 'product',
-                    'product_cat' => 'charternye-rejsy',
+                    'product_cat' => '',
                     'orderby' => 'date',
                     'order' => 'DESC'
                 );

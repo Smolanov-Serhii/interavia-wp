@@ -10,6 +10,7 @@
 ?>
 	</div><!-- .layout-content -->
 
+
 	<?php wp_footer(); ?>
 
 <script src="<?php echo get_template_directory_uri()?>/dist-cust/js/common.js"></script>

@@ -82,7 +82,7 @@ if ( has_term( 'charternye-rejsy', 'product_cat' ) ) {
 
 	<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php wc_get_template_part( 'content', 'single-product' ); ?>
+		<?php wc_get_template_part( 'content', 'single-ticket' ); ?>
 
 	<?php endwhile; // end of the loop. ?>
 

@@ -17,15 +17,7 @@ $price_html = $product->get_price_html();
 
     } else {
     ?>
-    <div>
-        <?php
-        if ( $price_html ) {
-            printf( '<p class="price">%s</p>', $price_html );
-        }
 
-        adventure_tours_render_template_part( 'templates/parts/scheme-price', '', array( 'product' => $product ) );
-        ?>
-    </div>
 <?php
 }
 ?>

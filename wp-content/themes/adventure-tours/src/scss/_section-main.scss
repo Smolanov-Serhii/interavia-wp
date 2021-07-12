@@ -143,7 +143,7 @@
             padding: 15px;
         }
         @media screen and  (max-width: 500px) {
-            padding: 0;
+            padding: 0 15px;
             background-color: transparent;
             section.mewtwo-flights{
                 border: none!important;
@@ -158,9 +158,22 @@
         .wpfFilterButtons{
             .wpfFilterButton{
                 margin: 0;
+                @media screen and  (max-width: 500px) {
+                    width: 100%;
+                }
+            }
+            @media screen and  (max-width: 500px) {
+                width: 100%;
             }
         }
         .filter-naprav{
+            @media screen and  (max-width: 500px) {
+                border: 1px solid #cccccc;
+                -webkit-box-shadow: inset 2px 2px 2px rgba(0,0,0,.1)!important;
+                box-shadow: inset 2px 2px 2px rgba(0,0,0,.1)!important;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
             .direct-icon{
                 background-image: url(../../images/direct-icon.svg);
                 background-repeat: no-repeat;
@@ -185,6 +198,12 @@
 
         }
         .filter-toback{
+            @media screen and  (max-width: 500px) {
+                border: 1px solid #cccccc;
+                -webkit-box-shadow: inset 2px 2px 2px rgba(0,0,0,.1)!important;
+                box-shadow: inset 2px 2px 2px rgba(0,0,0,.1)!important;
+                margin-bottom: 10px;
+            }
             .toback-icon{
                 background-image: url(../../images/calendar-icon.svg);
                 background-repeat: no-repeat;
@@ -207,13 +226,44 @@
                 }
             }
         }
+        #wpfBlock_5{
+            @media screen and  (max-width: 1150px) {
+                width: 25% !important;
+                margin-left: 0;
+                margin-right: 20px;
+            }
+            @media screen and  (max-width: 500px) {
+                width: 100% !important;
+                margin-right: 0;
+                margin-bottom: 10px;
+                select, .selectric .label{
+                    font-size: 16px!important;
+                    border-color: #cccccc !important;
+                }
+            }
+            @media screen and  (max-width: 500px) {
+                border: 1px solid #cccccc;
+                -webkit-box-shadow: inset 2px 2px 2px rgba(0,0,0,.1)!important;
+                box-shadow: inset 2px 2px 2px rgba(0,0,0,.1)!important;
+            }
+        }
         .filter-naprav, .filter-toback{
             display: flex;
             box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
             border-radius: 4px;
             margin-right: 20px;
             position: relative;
-
+            @media screen and  (max-width: 1150px) {
+                width: calc(50% - 10px);
+                margin-bottom: 20px;
+            }
+            @media screen and  (max-width: 768px) {
+                width: 100%;
+                margin-right: 0;
+            }
+            @media screen and  (max-width: 500px) {
+                margin-bottom: 10px;
+            }
             b.button{
                 display: none;
             }
@@ -234,6 +284,11 @@
                 }
             }
         }
+        .filter-toback{
+            @media screen and  (max-width: 1150px) {
+                margin-right: 0;
+            }
+        }
         .wpfFilterWrapper{
             margin-top: 0;
             margin-bottom: 0;
@@ -250,6 +305,10 @@
             }
             .wpfMainWrapper{
                 display: flex;
+                @media screen and  (max-width: 1150px) {
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                }
             }
         }
 
