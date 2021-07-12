@@ -25,6 +25,15 @@ if ( $is_sticky_header ) {
                 <div class="container">
                     <div class="col-md-12 header__content">
                         <?php get_template_part( 'templates/header/logo' ); ?>
+<!--                        <nav class="cat-men main-nav-header" role="navigation">-->
+<!--                            --><?php //wp_nav_menu(array(
+//                                'theme_location' => 'cat-menu',
+//                                'container' => 'ul',
+//                                'menu_class' => 'cat-menu main-nav',
+//                                'menu_id' => 'navigation',
+//                                'depth' => 3,
+//                            )); ?>
+<!--                        </nav>-->
                         <?php if ( has_nav_menu( 'header-menu' ) ) : ?>
                             <nav class="main-nav-header" role="navigation">
                                 <?php wp_nav_menu(array(

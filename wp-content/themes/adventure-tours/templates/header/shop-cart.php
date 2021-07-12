@@ -98,7 +98,8 @@ if ( ! $render_shopping_cart_link && empty( $user_links ) ) {
 <?php
 	if ( $user_links ) {
 		foreach( $user_links as $_link_code => $_url_address ) {
-			printf( '<a href="%s" class="header__info__item__account-icon" title="%s"><i class="%s"></i></a>',
+			printf( '<a href="%s" class="header__info__item__account-icon" title="%s">
+</a>',
 				esc_url( $_url_address ),
 				isset( $user_link_titles[ $_link_code ] ) ? esc_attr( $user_link_titles[ $_link_code ] ) : '',
 				isset( $link_icon_classes[ $_link_code ] ) ? $link_icon_classes[ $_link_code ] : ''
@@ -108,9 +109,9 @@ if ( ! $render_shopping_cart_link && empty( $user_links ) ) {
 
 	if ( $render_shopping_cart_link ) {
 		$cart_qty = WC()->cart->get_cart_contents_count();
-		printf( '<a href="%s"><i class="fa fa-shopping-cart"></i>%s</a>',
+		printf( '<a href="%s">Ваши билеты: %s</a>',
 			wc_get_cart_url(),
-			$cart_qty > 0 ? '(' . $cart_qty . ')' : ''
+			$cart_qty > 0 ? '(' . $cart_qty . ')' : '0'
 		);
 	}
 ?>

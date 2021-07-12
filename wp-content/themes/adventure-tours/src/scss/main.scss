@@ -21,6 +21,7 @@ a{
 }
 *{
   //font-family: "Open Sans", sans-serif!important;
+  font-family: 'Futura PT'!important;
 }
 .disabled-item{
   pointer-events: none;
@@ -41,8 +42,29 @@ html {
 
   }
 }
+.no-products{
+  display: block;
+  margin: auto;
+  text-align: center;
+  p{
+    max-width: 400px;
+    font-size: 30px!important;
+    line-height: 99%;
+    color: #FF0000;
+    margin: auto;
+    margin-top: 40px;
+    text-align: center!important;
+    @media screen and (max-width: 500px) {
+      text-align: left;
+      font-size: 20px!important;
+      max-width: 200px;
+    }
+  }
+}
 body{
   background-color: #f6f6f6;
+  width: 100%;
+  max-width: 100vw;
 }
 .woocommerce-page .woocommerce input.button, .woocommerce-page .woocommerce a.button, .woocommerce-page .woocommerce .button, .woocommerce-page input.button, .woocommerce-page a.button, .woocommerce-page .button, .woocommerce .woocommerce input.button, .woocommerce .woocommerce a.button, .woocommerce .woocommerce .button, .woocommerce input.button, .woocommerce a.button, .woocommerce .button{
   @include mainbutton;
@@ -286,6 +308,16 @@ div[class*='mage_default'] {
       font-size: 16px;
     }
   }
+  .header__info__item{
+    a{
+      opacity: 1;
+      display: flex;
+      align-items: center;
+      svg{
+        margin-right: 10px;
+      }
+    }
+  }
 }
 
 .reviewes {
@@ -304,6 +336,7 @@ div[class*='mage_default'] {
     }
   }
   .strong-view{
+    overflow: visible;
     @media all and (max-width: 500px) {
       padding: 0 15px!important;
     }
@@ -438,6 +471,16 @@ div[class*='mage_default'] {
 }
 
 .main-nav-header {
+  &.cat-men{
+    float: left;
+    margin-left: 4px;
+  }
+  .else-cat{
+    a{
+      font-weight: bolder;
+    }
+
+  }
   a {
     font-size: 18px;
     line-height: 99%;
@@ -471,9 +514,9 @@ form.mage_form label {
   margin: 0;
 }
 
-.main-nav .current-menu-item {
+.main-nav .current-menu-item, .current_page_item  {
   &:after {
-    display: none;
+    display: none!important;
   }
 
   a {
@@ -492,6 +535,7 @@ form.mage_form label {
       justify-content: space-between;
       .charter-item__img{
         order: 1;
+        text-align: left;
       }
       .charter-item__start{
         order: 2;
@@ -1788,6 +1832,46 @@ form.mage_form label {
 }
 span.fhide{
   display: none;
+}
+.woocommerce-shop{
+  .woocommerce-notices-wrapper{
+    .woocommerce-message{
+      display: flex;
+      flex-direction: column;
+      .wc-forward{
+        margin-left: 0;
+      }
+    }
+  }
+}
+.woocommerce-cart{
+  .page-single__content{
+    .cart-subtotal{
+      @media screen and (max-width: 500px) {
+        display: none!important;
+      }
+    }
+    .order-total{
+      @media screen and (max-width: 500px) {
+        border: none!important;
+      }
+    }
+    .product-box{
+      @media screen and (max-width: 500px) {
+        padding: 20px;
+      }
+    }
+  }
+
+  .woocommerce{
+    table.shop_table{
+      tr.cart_item{
+        dl.variation{
+
+        }
+      }
+    }
+  }
 }
 @import "_fonts.scss";
 @import "_header.scss";

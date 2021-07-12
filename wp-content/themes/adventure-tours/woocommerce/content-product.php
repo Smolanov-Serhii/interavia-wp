@@ -41,6 +41,7 @@ if ( empty( $woocommerce_loop['columns'] ) ) {
 global $product;
 $woocommerce_loop['loop']++;
 $price_html = $product->get_price_html();
+$itemcounter = 0;
 
 if ( has_term( 'charternye-rejsy', 'product_cat' ) ) {
     ?>
@@ -89,6 +90,7 @@ if ( has_term( 'charternye-rejsy', 'product_cat' ) ) {
     </div>
     <?php
 } else {
+    $itemcounter++;
     ?>
     <div <?php wc_product_class('atgrid__item', $product) ?>>
         <div class="atgrid__item__top charter-item__ticket">

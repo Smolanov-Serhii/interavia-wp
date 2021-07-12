@@ -512,6 +512,7 @@ add_theme_support( 'post-thumbnails' );
 register_nav_menus(array(
 	'header-menu' => esc_html__( 'Header Menu', 'adventure-tours' ),
 	'login-menu' => esc_html__( 'Login Menu', 'adventure-tours' ),
+	'cat-menu' => esc_html__( 'Cat-menu', 'adventure-tours' ),
 
 ));
 
@@ -1216,10 +1217,10 @@ function woo_custom_redirect_after_purchase() {
     }
 }
 
-add_filter ('add_to_cart_redirect', 'redirect_to_checkout');
-
-function redirect_to_checkout() {
-    global $woocommerce;
-    $checkout_url = get_home_url() . '/shop/';
-    return $checkout_url;
-}
+//add_filter ('add_to_cart_redirect', 'redirect_to_checkout');
+//
+//function redirect_to_checkout() {
+//    global $woocommerce;
+//    $checkout_url = get_home_url() . '/shop/';
+//    return $checkout_url;
+//}

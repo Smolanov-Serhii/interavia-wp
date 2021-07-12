@@ -30,14 +30,14 @@ get_header();
                 } else $disabled = "disabled-item";;
                 ?>
                 <div class="main__wrap-buttons">
-                    <div class="main__button" data-count="1">
+                    <div class="main__button" data-count="2">
                         <div class="main__button__content main__button__active">
-                            <span>Авиа билеты</span>
+                            <span>Чартерные рейсы</span>
                         </div>
                     </div>
-                    <div class="main__button" data-count="2">
+                    <div class="main__button" data-count="1">
                         <div class="main__button__content">
-                            <span>Чартерные рейсы</span>
+                            <span>Авиа билеты</span>
                         </div>
                     </div>
                     <div class="main__button <?php echo $disabled; ?>" data-count="3">
@@ -57,10 +57,10 @@ get_header();
                     </div>
                 </div>
                 <div class="main__wrap-form-list">
-                    <div class="main__wrap-form avia-filter active-form" data-count="1">
+                    <div class="main__wrap-form avia-filter" data-count="1">
                         <?php echo do_shortcode('[tp_search_shortcodes id="1"]') ?>
                     </div>
-                    <div class="main__wrap-form charter-filter" data-count="2">
+                    <div class="main__wrap-form charter-filter active-form" data-count="2">
                         <?php echo do_shortcode('[wpf-filters id=2]') ?>
                     </div>
                     <div class="main__wrap-form jd-filter" data-count="3">
