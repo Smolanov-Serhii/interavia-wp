@@ -1817,6 +1817,11 @@ form.mage_form label {
   padding: 20px 20px 20px 60px!important;
   line-height: 20px!important;
   position: relative;
+  a{
+    &:before{
+      display: none;
+    }
+  }
   .woocommerce-message-icon{
     position: absolute;
     top: 24px;

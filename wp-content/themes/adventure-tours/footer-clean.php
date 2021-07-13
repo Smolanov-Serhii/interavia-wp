@@ -13,8 +13,8 @@
 
 	<?php wp_footer(); ?>
 
-<script src="<?php echo get_template_directory_uri()?>/dist-cust/js/common.js"></script>
-<script src="<?php echo get_template_directory_uri()?>/src/js/jquery.selectric.js"></script>
+<script src="<?php echo get_template_directory_uri()?>/dist-cust/js/common2.js" defer></script>
+<script src="<?php echo get_template_directory_uri()?>/src/js/jquery.selectric.js" defer></script>
 
 </body>
 </html>
