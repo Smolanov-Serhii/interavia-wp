@@ -65,15 +65,23 @@ jQuery(document).ready(function($) {
         $('.charter-filter #wpfBlock_1').appendTo('.charter-filter .filter-naprav');
         $('<div class="direct-icon"></div>').appendTo('.charter-filter .filter-naprav');
         $('.charter-filter #wpfBlock_2').appendTo('.charter-filter .filter-naprav');
-
-        $('#wpfBlock_6 input').trigger('click');
         $('#wpfBlock_6').hide();
+        $('#wpfBlock_6 input').trigger('click');
     }
 
-    if ($('.term-charternye-rejsy #wpfBlock_8').length){
+    // if ($('#wpfwoofilterswidget-4').length){
+    //     if ( $('#wpfBlock_9 input').prop( "checked" ) ){
+    //
+    //     } else{
+    //         $('#wpfBlock_9 input').trigger('click');
+    //     }
+    //
+    // }
 
-        $('.term-charternye-rejsy #wpfBlock_8 input').trigger('click');
-        $('.term-charternye-rejsy #wpfBlock_8').hide();
+    if ($('.term-charternye-rejsy #wpfBlock_7').length){
+
+        $('.term-charternye-rejsy #wpfBlock_7 input').trigger('click');
+        $('.term-charternye-rejsy #wpfBlock_7').hide();
     }
 
 

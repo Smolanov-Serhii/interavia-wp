@@ -133,7 +133,7 @@ get_header();
                                 </div>
                             </div>
                             <div class="company">
-                                <?php the_post_thumbnail("thumbnail"); ?>
+                                <?php the_post_thumbnail(); ?>
                                 <?php echo $product->get_attribute('aviakompaniya'); ?>
                             </div>
                         </div>

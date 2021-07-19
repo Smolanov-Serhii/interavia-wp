@@ -134,6 +134,36 @@ if ( has_term( 'charternye-rejsy', 'product_cat' ) ) {
                 <a href="<?php the_permalink();?>">Заказать билет</a>
             </div>
         </div>
+        <div class="bagaje">
+            <div class="bagaje__part">Терминал: <?php echo $product->get_attribute('terminal'); ?></div>
+            <div class="bagaje__part">Рейс: <?php echo $product->get_attribute('rejs'); ?></div>
+        </div>
+        <div class="bagaje">
+                    <?php
+                    $attribute_names = get_the_terms($product->get_id(), 'pa_bagazh');
+                    $attribute_name = "pa_bagazh";
+                    if ($attribute_names) {
+                        foreach ($attribute_names as $attribute_name):
+                            ?>
+                    <div class="bagaje__part">
+<!--                        <div class="bagaje__icon">-->
+<!---->
+<!--                        </div>-->
+                            <div class="bagaje__part">
+                                <div class="bagaje__desc">
+                                    <?php
+                                    echo $attribute_name->name;
+                                    ?>
+                                </div>
+                            </div>
+                    </div>
+                            <?php
+                        endforeach;
+                    }
+                    ?>
+            </div>
+
+        </div>
     </div>
     <?php
 

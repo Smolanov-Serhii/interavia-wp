@@ -1217,10 +1217,24 @@ function woo_custom_redirect_after_purchase() {
     }
 }
 
-//add_filter ('add_to_cart_redirect', 'redirect_to_checkout');
-//
-//function redirect_to_checkout() {
-//    global $woocommerce;
-//    $checkout_url = get_home_url() . '/shop/';
-//    return $checkout_url;
-//}
+add_filter ('add_to_cart_redirect', 'redirect_to_checkout');
+
+function redirect_to_checkout() {
+    global $woocommerce;
+    $checkout_url = get_home_url() . '/cart/';
+    return $checkout_url;
+}
+
+add_action( 'woocommerce_product_query', 'so_20990199_product_query' );
+
+function so_20990199_product_query( $q ){
+
+    $product_ids_on_sale = wc_get_product_ids_on_sale();
+
+    $meta_query = WC()->query->get_meta_query();
+
+    $q->set( 'post__in', array_merge( array( 0 ), $product_ids_on_sale ) );
+
+}
+
+
