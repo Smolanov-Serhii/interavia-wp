@@ -35,7 +35,7 @@ do_action('woocommerce_before_add_to_cart_form'); ?>
         <?php do_action('woocommerce_before_variations_form'); ?>
 
         <?php if (empty($available_variations) && false !== $available_variations) : ?>
-            <p class="stock out-of-stock"><?php esc_html_e('This product is currently out of stock and unavailable.', 'adventure-tours'); ?></p>
+            <p class="stock out-of-stock"><?php esc_html_e('Этого билета нет в наличии, заказ недоступен.', 'adventure-tours'); ?></p>
         <?php else : ?>
             <div class="variations custom-variations" cellspacing="0">
 

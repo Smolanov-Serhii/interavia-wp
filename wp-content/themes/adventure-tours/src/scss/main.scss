@@ -1353,7 +1353,10 @@ form.mage_form label {
           display: flex;
           flex-wrap: wrap;
           .wapf-field-container{
-            //width: 20% !important;
+            width: 20% !important;
+            @media screen and  (max-width: 768px) {
+              width: 100% !important;
+            }
           }
         }
       }
@@ -1913,6 +1916,11 @@ span.fhide{
   .variable-item{
     width: calc(20% - 10px);
     margin-right: 10px;
+    padding-bottom: 15px;
+    label{
+      font-size: 100%;
+      font: inherit;
+    }
     @media screen and  (max-width: 995px) {
       width: calc(33.3% - 10px);
     }
