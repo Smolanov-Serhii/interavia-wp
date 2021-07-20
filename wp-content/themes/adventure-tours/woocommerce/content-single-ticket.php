@@ -97,6 +97,34 @@ $price_html = $product->get_price_html();
                 <?php echo $product->get_attribute('kuda'); ?>
             </div>
         </div>
+        <div class="bagaje">
+            <div class="bagaje__part">Терминал: <?php echo $product->get_attribute('terminal'); ?></div>
+            <div class="bagaje__part">Рейс: <?php echo $product->get_attribute('rejs'); ?></div>
+        </div>
+        <div class="bagaje">
+            <?php
+            $attribute_names = get_the_terms($product->get_id(), 'pa_bagazh');
+            $attribute_name = "pa_bagazh";
+            if ($attribute_names) {
+                foreach ($attribute_names as $attribute_name):
+                    ?>
+                    <div class="bagaje__part">
+                        <!--                        <div class="bagaje__icon">-->
+                        <!---->
+                        <!--                        </div>-->
+                        <div class="bagaje__part">
+                            <div class="bagaje__desc">
+                                <?php
+                                echo $attribute_name->name;
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php
+                endforeach;
+            }
+            ?>
+        </div>
     </div>
 </div>
 <div itemscope itemtype="<?php echo adventure_tours_woocommerce_get_product_schema(); ?>"
@@ -104,7 +132,7 @@ $price_html = $product->get_price_html();
 
     <div class="product-box product-box--page-single padding-all">
         <div class="row">
-            <div class="">
+            <div class="container">
                 <?php
                 /**
                  * woocommerce_single_product_summary hook

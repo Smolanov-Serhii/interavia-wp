@@ -531,6 +531,33 @@ form.mage_form label {
 .atgrid__item-wrap{
   margin-bottom: 10px;
 }
+.charter-item__ticket{
+  .bagaje{
+    padding: 40px 0 0 0;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    .bagaje__part{
+      white-space: nowrap;
+    }
+    @media all and (max-width: 700px) {
+      order: 4;
+    }
+    &:last-child{
+      padding-top: 20px;
+    }
+    .bagaje__part{
+      //width: calc(50% - 10px);
+      width: auto;
+      display: flex;
+      margin-right: 20px;
+      > div{
+        width: 100%;
+        font-weight: bolder;
+      }
+    }
+  }
+}
 .post-type-archive-product {
   .bagaje{
     padding: 0 20px 20px 20px;
@@ -1326,7 +1353,7 @@ form.mage_form label {
           display: flex;
           flex-wrap: wrap;
           .wapf-field-container{
-            width: 20% !important;
+            //width: 20% !important;
           }
         }
       }
@@ -1880,9 +1907,18 @@ span.fhide{
 .custom-variations{
   display: flex;
   margin-right: -10px;
+  @media screen and  (max-width: 768px) {
+    flex-wrap: wrap;
+  }
   .variable-item{
     width: calc(20% - 10px);
     margin-right: 10px;
+    @media screen and  (max-width: 995px) {
+      width: calc(33.3% - 10px);
+    }
+    @media screen and  (max-width: 768px) {
+      width: 100%;
+    }
     span{
       width: 100% !important;
       b{
